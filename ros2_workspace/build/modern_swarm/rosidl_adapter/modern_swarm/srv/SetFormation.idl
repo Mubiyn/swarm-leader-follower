@@ -1,0 +1,40 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from modern_swarm/srv/SetFormation.srv
+// generated code does not contain a copyright notice
+
+
+module modern_swarm {
+  module srv {
+    @verbatim (language="comment", text=
+      "SetFormation service definition" "\n"
+      "Request: formation type and parameters")
+    struct SetFormation_Request {
+      @verbatim (language="comment", text=
+        "\"triangle\", \"line\", \"circle\", \"v_shape\"")
+      string formation_type;
+
+      @verbatim (language="comment", text=
+        "Distance between robots in formation")
+      double spacing;
+
+      @verbatim (language="comment", text=
+        "Maximum number of followers (optional)")
+      int32 max_followers;
+    };
+    @verbatim (language="comment", text=
+      "Response: success status and message")
+    struct SetFormation_Response {
+      @verbatim (language="comment", text=
+        "True if formation was set successfully")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "Status message or error description")
+      string message;
+
+      @verbatim (language="comment", text=
+        "Confirmation of active formation")
+      string current_formation;
+    };
+  };
+};

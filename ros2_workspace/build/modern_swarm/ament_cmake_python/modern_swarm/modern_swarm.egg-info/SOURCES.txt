@@ -1,0 +1,8 @@
+setup.py
+modern_swarm/__init__.py
+modern_swarm/robot_simulator.py
+modern_swarm/swarm_controller.py
+modern_swarm.egg-info/PKG-INFO
+modern_swarm.egg-info/SOURCES.txt
+modern_swarm.egg-info/dependency_links.txt
+modern_swarm.egg-info/top_level.txt

@@ -1,0 +1,44 @@
+# Modern Swarm Robotics Configuration
+# Parameters for vision and control systems
+
+# Vision System Parameters
+vision:
+  yolo_model_path: "yolov8n.pt"
+  detection_confidence: 0.5
+  robot_width: 0.4  # meters
+  max_detection_range: 10.0  # meters
+  field_of_view: 1.3962634  # radians
+
+# MPC Controller Parameters  
+controller:
+  desired_distance: 0.75  # meters
+  prediction_horizon: 10
+  control_horizon: 3
+  max_linear_vel: 1.0   # m/s
+  max_angular_vel: 2.0  # rad/s
+  safety_distance: 0.3  # meters
+  
+  # MPC weights
+  weights:
+    formation: 10.0
+    collision: 50.0
+    control_effort: 1.0
+    smoothness: 5.0
+
+# Formation Parameters
+formation:
+  type: "line"  # line, triangle, diamond
+  spacing: 0.75  # meters between robots
+  max_robots: 5
+
+# Robot Physical Parameters
+robot:
+  width: 0.3   # meters
+  length: 0.35 # meters
+  max_speed: 1.5 # m/s
+
+# Simulation Parameters
+simulation:
+  use_gazebo: true
+  world_file: "empty_world.sdf"
+  robot_model: "neato" 

@@ -1,0 +1,44 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from modern_swarm/srv/SetController.srv
+// generated code does not contain a copyright notice
+
+
+module modern_swarm {
+  module srv {
+    @verbatim (language="comment", text=
+      "SetController service definition" "\n"
+      "Request: controller type and parameters")
+    struct SetController_Request {
+      @verbatim (language="comment", text=
+        "\"proportional\", \"mpc\", \"rl\"")
+      string controller_type;
+
+      @verbatim (language="comment", text=
+        "Gain for proportional controller")
+      double proportional_gain;
+
+      @verbatim (language="comment", text=
+        "Prediction horizon for MPC")
+      int32 mpc_horizon;
+
+      @verbatim (language="comment", text=
+        "Learning rate for RL")
+      double learning_rate;
+    };
+    @verbatim (language="comment", text=
+      "Response: success status and message")
+    struct SetController_Response {
+      @verbatim (language="comment", text=
+        "True if controller was set successfully")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "Status message or error description")
+      string message;
+
+      @verbatim (language="comment", text=
+        "Confirmation of active controller")
+      string current_controller;
+    };
+  };
+};

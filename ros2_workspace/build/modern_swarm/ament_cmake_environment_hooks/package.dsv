@@ -1,0 +1,4 @@
+source;share/modern_swarm/local_setup.bash
+source;share/modern_swarm/local_setup.dsv
+source;share/modern_swarm/local_setup.sh
+source;share/modern_swarm/local_setup.zsh

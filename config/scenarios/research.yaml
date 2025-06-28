@@ -1,0 +1,63 @@
+# 🔬 Research Swarm Configuration
+# Optimized for algorithm testing, research, and comprehensive metrics
+# Use: ros2 launch launch/enhanced_swarm_system.launch.py config_file:=config/scenarios/research.yaml
+
+swarm_controller:
+  ros__parameters:
+    # === FORMATION PARAMETERS ===
+    formation:
+      spacing: 3.0              # Balanced spacing for analysis
+      max_followers: 5          # More robots for complex formations
+      adaptive_spacing: true
+      switch_threshold: 0.8     # Moderate switching for testing
+    
+    # === CONTROL PARAMETERS ===
+    control:
+      proportional_gain: 1.2    # Balanced gain for analysis
+      max_velocity: 1.5         # Moderate velocity for observation
+      velocity_smoothing: 0.4   # Moderate smoothing
+      position_tolerance: 0.15  # Balanced tolerance
+      angle_tolerance: 0.1
+      max_angular_velocity: 2.0 # Moderate rotation
+    
+    # === LEADER PARAMETERS ===
+    leader:
+      radius: 8.0               # Good size for observation
+      speed: 1.2                # Moderate speed for analysis
+      circular_motion: true
+      motion_pattern: "complex"  # Complex pattern for testing
+    
+    # === OBSTACLE PARAMETERS ===
+    obstacles:
+      avoidance_distance: 3.0   # Balanced avoidance distance
+      repulsion_gain: 1.2       # Moderate repulsion for study
+      max_obstacles: 6          # Multiple obstacles for testing
+      auto_cleanup: false       # Manual cleanup for control
+      cleanup_time: 20.0        # Long cleanup for observation
+      dynamic_probability: 0.3  # Mix of static/dynamic
+    
+    # === VISUALIZATION PARAMETERS ===
+    visualization:
+      trail_length: 150         # Long trails for trajectory analysis
+      update_rate: 25.0         # Balanced update rate
+      show_trajectories: true
+      show_formation_lines: true
+      robot_size: 0.35
+      grid_enabled: true        # Grid for measurement
+      
+    # === RESEARCH-SPECIFIC PARAMETERS ===
+    research:
+      enable_metrics: true      # Comprehensive metrics logging
+      save_trajectories: true   # Save all trajectory data
+      log_formation_errors: true
+      log_collision_events: true
+      analysis_window: 5.0      # Analysis window in seconds
+      export_data: true         # Export for external analysis
+    
+    # === SAFETY PARAMETERS ===
+    safety:
+      collision_distance: 1.2   # Balanced collision threshold
+      emergency_stop: true      # Safety first in research
+      boundary_x: 20.0          # Large boundary for complex tests
+      boundary_y: 20.0
+      boundary_enforcement: true 

@@ -1,0 +1,11 @@
+source;share/modern_swarm/hook/cmake_prefix_path.ps1
+source;share/modern_swarm/hook/cmake_prefix_path.dsv
+source;share/modern_swarm/hook/cmake_prefix_path.sh
+source;share/modern_swarm/hook/pythonpath.ps1
+source;share/modern_swarm/hook/pythonpath.dsv
+source;share/modern_swarm/hook/pythonpath.sh
+source;share/modern_swarm/local_setup.bash
+source;share/modern_swarm/local_setup.dsv
+source;share/modern_swarm/local_setup.ps1
+source;share/modern_swarm/local_setup.sh
+source;share/modern_swarm/local_setup.zsh

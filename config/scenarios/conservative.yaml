@@ -1,0 +1,54 @@
+# 🛡️ Conservative Swarm Configuration
+# Optimized for safety, stability, and smooth demonstrations
+# Use: ros2 launch launch/enhanced_swarm_system.launch.py config_file:=config/scenarios/conservative.yaml
+
+swarm_controller:
+  ros__parameters:
+    # === FORMATION PARAMETERS ===
+    formation:
+      spacing: 4.0              # Wider spacing for safety
+      max_followers: 3
+      adaptive_spacing: false   # Fixed spacing for predictability
+      switch_threshold: 1.5     # Slower formation switching
+    
+    # === CONTROL PARAMETERS ===
+    control:
+      proportional_gain: 0.8    # Lower gain for stability
+      max_velocity: 1.0         # Conservative max velocity
+      velocity_smoothing: 0.8   # Heavy smoothing for stability
+      position_tolerance: 0.1   # Tight tolerance for precision
+      angle_tolerance: 0.05
+      max_angular_velocity: 1.0 # Slower rotation
+    
+    # === LEADER PARAMETERS ===
+    leader:
+      radius: 10.0              # Larger radius for gentle turns
+      speed: 0.8                # Moderate leader speed
+      circular_motion: true
+      motion_pattern: "circular"  # Simple circular pattern
+    
+    # === OBSTACLE PARAMETERS ===
+    obstacles:
+      avoidance_distance: 4.0   # Early avoidance for safety
+      repulsion_gain: 2.0       # Strong repulsion
+      max_obstacles: 3          # Fewer obstacles
+      auto_cleanup: true
+      cleanup_time: 15.0        # Longer cleanup time
+      dynamic_probability: 0.1  # Mostly static obstacles
+    
+    # === VISUALIZATION PARAMETERS ===
+    visualization:
+      trail_length: 100         # Longer trails for analysis
+      update_rate: 20.0         # Moderate update rate
+      show_trajectories: true
+      show_formation_lines: true
+      robot_size: 0.4
+      grid_enabled: true        # Grid for reference
+    
+    # === SAFETY PARAMETERS ===
+    safety:
+      collision_distance: 1.5   # Large collision threshold
+      emergency_stop: true      # Enable emergency stop
+      boundary_x: 12.0          # Moderate boundary
+      boundary_y: 12.0
+      boundary_enforcement: true 
