@@ -9,24 +9,19 @@ Panels:
         - /Robot Markers1
         - /Obstacles1
         - /Leader Model1
-        - /Leader Model1/Status1
         - /Leader Model1/Mass Properties1
         - /Follower 1 Model1
-        - /Follower 1 Model1/Status1
         - /Follower 1 Model1/Mass Properties1
         - /Follower 1 Model1/Description Topic1
         - /Follower 2 Model1
-        - /Follower 2 Model1/Status1
         - /Follower 2 Model1/Mass Properties1
         - /Follower 2 Model1/Description Topic1
         - /Follower 3 Model1
-        - /Follower 3 Model1/Status1
         - /Follower 3 Model1/Mass Properties1
-        - /Follower 3 Model1/Description Topic1
         - /TF1
         - /TF1/Tree1
       Splitter Ratio: 0.5
-    Tree Height: 622
+    Tree Height: 351
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -195,8 +190,8 @@ Visualization Manager:
           Show Trail: false
           Value: true
       Mass Properties:
-        Inertia: true
-        Mass: true
+        Inertia: false
+        Mass: false
       Name: Follower 1 Model
       TF Prefix: follower_1
       Update Interval: 0
@@ -355,8 +350,8 @@ Visualization Manager:
           Value: true
       Marker Scale: 1
       Name: TF
-      Show Arrows: true
-      Show Axes: true
+      Show Arrows: false
+      Show Axes: false
       Show Names: true
       Tree:
         map:
@@ -436,7 +431,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 19.263713836669922
+      Distance: 20.424667358398438
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -451,18 +446,18 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6053985953330994
+      Pitch: 0.4853988289833069
       Target Frame: map
       Value: Orbit (rviz_default_plugins)
-      Yaw: 0.5953924059867859
+      Yaw: 5.048563003540039
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: false
-  Height: 846
-  Hide Left Dock: false
+    collapsed: true
+  Height: 1041
+  Hide Left Dock: true
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000003e700000307fc0200000005fb000000100044006900730070006c006100790073010000002c00000307000000ab00fffffffb0000001200530065006c0065006300740069006f006e000000025d000000d60000006200fffffffb0000001e0054006f006f006c002000500072006f0070006500720074006900650073000000028b000000a80000006200fffffffb0000000a005600690065007700730000000248000000eb000000c600fffffffb0000000800540069006d006500000002ba000000790000003700ffffff000000c80000030700000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000003e7000003cafc0200000005fb000000100044006900730070006c006100790073000000002c000003ca000000e300fffffffb0000001200530065006c0065006300740069006f006e000000025d000000d60000006200fffffffb0000001e0054006f006f006c002000500072006f0070006500720074006900650073000000028b000000a80000006200fffffffb0000000a005600690065007700730000000248000000eb000000c600fffffffb0000000800540069006d006500000002ba000000790000003700ffffff000006ae000003ca00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -471,6 +466,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1200
-  X: 100
-  Y: 99
+  Width: 1710
+  X: 0
+  Y: 43

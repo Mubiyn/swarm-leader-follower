@@ -1,6 +1,0 @@
-# SetController service definition
-# Request: controller type and parameters
-string controller_type   # "proportional", "mpc", "rl"
-float64 proportional_gain # Gain for proportional controller
-int32 mpc_horizon       # Prediction horizon for MPC
-float64 learning_rate   # Learning rate for RL

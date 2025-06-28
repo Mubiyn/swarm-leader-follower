@@ -1,8 +1,0 @@
-{
-  "package_name": "modern_swarm",
-  "non_idl_tuples": [
-    "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/src/modern_swarm:srv/SetFormation.srv",
-    "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/src/modern_swarm:srv/SetController.srv",
-    "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/src/modern_swarm:srv/AddObstacle.srv"
-  ]
-}

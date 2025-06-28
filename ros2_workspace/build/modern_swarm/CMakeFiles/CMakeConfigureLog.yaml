@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc"
-      binary: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc"
+      source: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u"
+      binary: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_C_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/miniconda3/envs/ros2/include"
@@ -141,20 +141,20 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc'
+        Change Dir: '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u'
         
-        Run Build Command(s): /opt/miniconda3/envs/ros2/bin/cmake -E env VERBOSE=1 /opt/miniconda3/envs/ros2/bin/make -f Makefile cmTC_aae08/fast
-        /opt/miniconda3/envs/ros2/bin/make  -f CMakeFiles/cmTC_aae08.dir/build.make CMakeFiles/cmTC_aae08.dir/build
-        make[1]: Entering directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc'
-        Building C object CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o
-        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/miniconda3/envs/ros2/bin/cmake -E env VERBOSE=1 /opt/miniconda3/envs/ros2/bin/make -f Makefile cmTC_d36b8/fast
+        /opt/miniconda3/envs/ros2/bin/make  -f CMakeFiles/cmTC_d36b8.dir/build.make CMakeFiles/cmTC_d36b8.dir/build
+        make[1]: Entering directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u'
+        Building C object CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o
+        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCCompilerABI.c
         clang version 18.1.8
         Target: arm64-apple-darwin20.0.0
         Thread model: posix
         InstalledDir: /opt/miniconda3/envs/ros2/bin
         arm64-apple-darwin20.0: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
          (in-process)
-         "/opt/miniconda3/envs/ros2/bin/clang-18" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc -resource-dir /opt/miniconda3/envs/ros2/lib/clang/18 -dependency-file CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /opt/miniconda3/envs/ros2/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/miniconda3/envs/ros2/lib/clang/18/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -O2 -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -x c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCCompilerABI.c
+         "/opt/miniconda3/envs/ros2/bin/clang-18" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u -resource-dir /opt/miniconda3/envs/ros2/lib/clang/18 -dependency-file CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /opt/miniconda3/envs/ros2/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/miniconda3/envs/ros2/lib/clang/18/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -O2 -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -x c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCCompilerABI.c
         clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target arm64-apple-darwin24.1.0
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
@@ -165,13 +165,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking C executable cmTC_aae08
-        /opt/miniconda3/envs/ros2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aae08.dir/link.txt --verbose=1
+        Linking C executable cmTC_d36b8
+        /opt/miniconda3/envs/ros2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d36b8.dir/link.txt --verbose=1
         clang version 18.1.8
         Target: arm64-apple-darwin20.0.0
         Thread model: posix
         InstalledDir: /opt/miniconda3/envs/ros2/bin
-         "/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/miniconda3/envs/ros2/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_aae08 -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/miniconda3/envs/ros2/lib -v CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -lSystem /opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a
+         "/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/miniconda3/envs/ros2/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_d36b8 -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/miniconda3/envs/ros2/lib -v CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -lSystem /opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld  PROJECT:ld64-951.9
         BUILD 16:55:20 Apr  5 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
@@ -181,8 +181,8 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/
-        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/miniconda3/envs/ros2/lib -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -v -Wl,-v CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -o cmTC_aae08
-        make[1]: Leaving directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc'
+        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/miniconda3/envs/ros2/lib -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -v -Wl,-v CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -o cmTC_d36b8
+        make[1]: Leaving directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u'
         
       exitCode: 0
   -
@@ -224,20 +224,20 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc']
+        ignore line: [Change Dir: '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/miniconda3/envs/ros2/bin/cmake -E env VERBOSE=1 /opt/miniconda3/envs/ros2/bin/make -f Makefile cmTC_aae08/fast]
-        ignore line: [/opt/miniconda3/envs/ros2/bin/make  -f CMakeFiles/cmTC_aae08.dir/build.make CMakeFiles/cmTC_aae08.dir/build]
-        ignore line: [make[1]: Entering directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc']
-        ignore line: [Building C object CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/miniconda3/envs/ros2/bin/cmake -E env VERBOSE=1 /opt/miniconda3/envs/ros2/bin/make -f Makefile cmTC_d36b8/fast]
+        ignore line: [/opt/miniconda3/envs/ros2/bin/make  -f CMakeFiles/cmTC_d36b8.dir/build.make CMakeFiles/cmTC_d36b8.dir/build]
+        ignore line: [make[1]: Entering directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u']
+        ignore line: [Building C object CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCCompilerABI.c]
         ignore line: [clang version 18.1.8]
         ignore line: [Target: arm64-apple-darwin20.0.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/miniconda3/envs/ros2/bin]
         ignore line: [arm64-apple-darwin20.0: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ (in-process)]
-        ignore line: [ "/opt/miniconda3/envs/ros2/bin/clang-18" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc -resource-dir /opt/miniconda3/envs/ros2/lib/clang/18 -dependency-file CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /opt/miniconda3/envs/ros2/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/miniconda3/envs/ros2/lib/clang/18/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -O2 -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -x c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/opt/miniconda3/envs/ros2/bin/clang-18" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u -resource-dir /opt/miniconda3/envs/ros2/lib/clang/18 -dependency-file CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /opt/miniconda3/envs/ros2/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/miniconda3/envs/ros2/lib/clang/18/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -O2 -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -x c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target arm64-apple-darwin24.1.0]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
@@ -248,13 +248,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_aae08]
-        ignore line: [/opt/miniconda3/envs/ros2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aae08.dir/link.txt --verbose=1]
+        ignore line: [Linking C executable cmTC_d36b8]
+        ignore line: [/opt/miniconda3/envs/ros2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d36b8.dir/link.txt --verbose=1]
         ignore line: [clang version 18.1.8]
         ignore line: [Target: arm64-apple-darwin20.0.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/miniconda3/envs/ros2/bin]
-        link line: [ "/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/miniconda3/envs/ros2/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_aae08 -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/miniconda3/envs/ros2/lib -v CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -lSystem /opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/miniconda3/envs/ros2/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_d36b8 -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/miniconda3/envs/ros2/lib -v CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -lSystem /opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a]
           arg [/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -271,7 +271,7 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_aae08] ==> ignore
+          arg [cmTC_d36b8] ==> ignore
           arg [-L/opt/miniconda3/envs/ros2/lib] ==> dir [/opt/miniconda3/envs/ros2/lib]
           arg [-L/opt/homebrew/opt/tcl-tk/lib] ==> dir [/opt/homebrew/opt/tcl-tk/lib]
           arg [-search_paths_first] ==> ignore
@@ -281,7 +281,7 @@ events:
           arg [-rpath] ==> ignore
           arg [/opt/miniconda3/envs/ros2/lib] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a]
         ignore line: [@(#)PROGRAM:ld  PROJECT:ld64-951.9]
@@ -293,8 +293,8 @@ events:
         ignore line: [	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib]
         ignore line: [Framework search paths:]
         ignore line: [	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/]
-        ignore line: [/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /opt/miniconda3/envs/ros2/lib -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -v -Wl -v CMakeFiles/cmTC_aae08.dir/CMakeCCompilerABI.c.o -o cmTC_aae08]
-        ignore line: [make[1]: Leaving directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-NJVkfc']
+        ignore line: [/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /opt/miniconda3/envs/ros2/lib -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -v -Wl -v CMakeFiles/cmTC_d36b8.dir/CMakeCCompilerABI.c.o -o cmTC_d36b8]
+        ignore line: [make[1]: Leaving directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-847u9u']
         ignore line: []
         ignore line: []
         Library search paths: [;/opt/miniconda3/envs/ros2/lib;/opt/homebrew/opt/tcl-tk/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib]
@@ -322,8 +322,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6"
-      binary: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6"
+      source: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE"
+      binary: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_CXX_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/miniconda3/envs/ros2/include"
@@ -337,20 +337,20 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6'
+        Change Dir: '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE'
         
-        Run Build Command(s): /opt/miniconda3/envs/ros2/bin/cmake -E env VERBOSE=1 /opt/miniconda3/envs/ros2/bin/make -f Makefile cmTC_7e226/fast
-        /opt/miniconda3/envs/ros2/bin/make  -f CMakeFiles/cmTC_7e226.dir/build.make CMakeFiles/cmTC_7e226.dir/build
-        make[1]: Entering directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6'
-        Building CXX object CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o
-        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/miniconda3/envs/ros2/bin/cmake -E env VERBOSE=1 /opt/miniconda3/envs/ros2/bin/make -f Makefile cmTC_0bb86/fast
+        /opt/miniconda3/envs/ros2/bin/make  -f CMakeFiles/cmTC_0bb86.dir/build.make CMakeFiles/cmTC_0bb86.dir/build
+        make[1]: Entering directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE'
+        Building CXX object CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp
         clang version 18.1.8
         Target: arm64-apple-darwin20.0.0
         Thread model: posix
         InstalledDir: /opt/miniconda3/envs/ros2/bin
         arm64-apple-darwin20.0: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
          (in-process)
-         "/opt/miniconda3/envs/ros2/bin/clang-18" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6 -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6 -resource-dir /opt/miniconda3/envs/ros2/lib/clang/18 -dependency-file CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/miniconda3/envs/ros2/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/miniconda3/envs/ros2/bin/../include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/miniconda3/envs/ros2/lib/clang/18/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp
+         "/opt/miniconda3/envs/ros2/bin/clang-18" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE -resource-dir /opt/miniconda3/envs/ros2/lib/clang/18 -dependency-file CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/miniconda3/envs/ros2/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/miniconda3/envs/ros2/bin/../include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/miniconda3/envs/ros2/lib/clang/18/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target arm64-apple-darwin24.1.0
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
@@ -362,13 +362,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_7e226
-        /opt/miniconda3/envs/ros2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e226.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_0bb86
+        /opt/miniconda3/envs/ros2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0bb86.dir/link.txt --verbose=1
         clang version 18.1.8
         Target: arm64-apple-darwin20.0.0
         Thread model: posix
         InstalledDir: /opt/miniconda3/envs/ros2/bin
-         "/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/miniconda3/envs/ros2/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_7e226 -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/miniconda3/envs/ros2/lib -v CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a
+         "/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/miniconda3/envs/ros2/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_0bb86 -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/miniconda3/envs/ros2/lib -v CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld  PROJECT:ld64-951.9
         BUILD 16:55:20 Apr  5 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
@@ -378,8 +378,8 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/
-        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/miniconda3/envs/ros2/lib -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -v -Wl,-v CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7e226
-        make[1]: Leaving directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6'
+        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/miniconda3/envs/ros2/lib -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -v -Wl,-v CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0bb86
+        make[1]: Leaving directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE'
         
       exitCode: 0
   -
@@ -423,20 +423,20 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6']
+        ignore line: [Change Dir: '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/miniconda3/envs/ros2/bin/cmake -E env VERBOSE=1 /opt/miniconda3/envs/ros2/bin/make -f Makefile cmTC_7e226/fast]
-        ignore line: [/opt/miniconda3/envs/ros2/bin/make  -f CMakeFiles/cmTC_7e226.dir/build.make CMakeFiles/cmTC_7e226.dir/build]
-        ignore line: [make[1]: Entering directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6']
-        ignore line: [Building CXX object CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/miniconda3/envs/ros2/bin/cmake -E env VERBOSE=1 /opt/miniconda3/envs/ros2/bin/make -f Makefile cmTC_0bb86/fast]
+        ignore line: [/opt/miniconda3/envs/ros2/bin/make  -f CMakeFiles/cmTC_0bb86.dir/build.make CMakeFiles/cmTC_0bb86.dir/build]
+        ignore line: [make[1]: Entering directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE']
+        ignore line: [Building CXX object CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -c /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang version 18.1.8]
         ignore line: [Target: arm64-apple-darwin20.0.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/miniconda3/envs/ros2/bin]
         ignore line: [arm64-apple-darwin20.0: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ (in-process)]
-        ignore line: [ "/opt/miniconda3/envs/ros2/bin/clang-18" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6 -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6 -resource-dir /opt/miniconda3/envs/ros2/lib/clang/18 -dependency-file CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/miniconda3/envs/ros2/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/miniconda3/envs/ros2/bin/../include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/miniconda3/envs/ros2/lib/clang/18/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/opt/miniconda3/envs/ros2/bin/clang-18" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE -resource-dir /opt/miniconda3/envs/ros2/lib/clang/18 -dependency-file CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/miniconda3/envs/ros2/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/miniconda3/envs/ros2/bin/../include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/miniconda3/envs/ros2/lib/clang/18/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/miniconda3/envs/ros2/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target arm64-apple-darwin24.1.0]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
@@ -448,13 +448,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_7e226]
-        ignore line: [/opt/miniconda3/envs/ros2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e226.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_0bb86]
+        ignore line: [/opt/miniconda3/envs/ros2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0bb86.dir/link.txt --verbose=1]
         ignore line: [clang version 18.1.8]
         ignore line: [Target: arm64-apple-darwin20.0.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/miniconda3/envs/ros2/bin]
-        link line: [ "/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/miniconda3/envs/ros2/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_7e226 -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/miniconda3/envs/ros2/lib -v CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/miniconda3/envs/ros2/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_0bb86 -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/miniconda3/envs/ros2/lib -v CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a]
           arg [/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -471,7 +471,7 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_7e226] ==> ignore
+          arg [cmTC_0bb86] ==> ignore
           arg [-L/opt/miniconda3/envs/ros2/lib] ==> dir [/opt/miniconda3/envs/ros2/lib]
           arg [-L/opt/homebrew/opt/tcl-tk/lib] ==> dir [/opt/homebrew/opt/tcl-tk/lib]
           arg [-search_paths_first] ==> ignore
@@ -481,7 +481,7 @@ events:
           arg [-rpath] ==> ignore
           arg [/opt/miniconda3/envs/ros2/lib] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/miniconda3/envs/ros2/lib/clang/18/lib/darwin/libclang_rt.osx.a]
@@ -494,8 +494,8 @@ events:
         ignore line: [	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib]
         ignore line: [Framework search paths:]
         ignore line: [	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/]
-        ignore line: [/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /opt/miniconda3/envs/ros2/lib -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -v -Wl -v CMakeFiles/cmTC_7e226.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7e226]
-        ignore line: [make[1]: Leaving directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4738D6']
+        ignore line: [/opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /opt/miniconda3/envs/ros2/lib -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib -v -Wl -v CMakeFiles/cmTC_0bb86.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0bb86]
+        ignore line: [make[1]: Leaving directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K3wxDE']
         ignore line: []
         ignore line: []
         Library search paths: [;/opt/miniconda3/envs/ros2/lib;/opt/homebrew/opt/tcl-tk/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib]
@@ -534,8 +534,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K1Q9ET"
-      binary: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K1Q9ET"
+      source: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4kGMss"
+      binary: "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4kGMss"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_C_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/miniconda3/envs/ros2/include"
@@ -549,17 +549,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K1Q9ET'
+        Change Dir: '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4kGMss'
         
-        Run Build Command(s): /opt/miniconda3/envs/ros2/bin/cmake -E env VERBOSE=1 /opt/miniconda3/envs/ros2/bin/make -f Makefile cmTC_3d606/fast
-        /opt/miniconda3/envs/ros2/bin/make  -f CMakeFiles/cmTC_3d606.dir/build.make CMakeFiles/cmTC_3d606.dir/build
-        make[1]: Entering directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K1Q9ET'
-        Building C object CMakeFiles/cmTC_3d606.dir/src.c.o
-        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang -DCMAKE_HAVE_LIBC_PTHREAD  -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -MD -MT CMakeFiles/cmTC_3d606.dir/src.c.o -MF CMakeFiles/cmTC_3d606.dir/src.c.o.d -o CMakeFiles/cmTC_3d606.dir/src.c.o -c /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K1Q9ET/src.c
-        Linking C executable cmTC_3d606
-        /opt/miniconda3/envs/ros2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d606.dir/link.txt --verbose=1
-        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/miniconda3/envs/ros2/lib -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib  CMakeFiles/cmTC_3d606.dir/src.c.o -o cmTC_3d606
-        make[1]: Leaving directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-K1Q9ET'
+        Run Build Command(s): /opt/miniconda3/envs/ros2/bin/cmake -E env VERBOSE=1 /opt/miniconda3/envs/ros2/bin/make -f Makefile cmTC_0624f/fast
+        /opt/miniconda3/envs/ros2/bin/make  -f CMakeFiles/cmTC_0624f.dir/build.make CMakeFiles/cmTC_0624f.dir/build
+        make[1]: Entering directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4kGMss'
+        Building C object CMakeFiles/cmTC_0624f.dir/src.c.o
+        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang -DCMAKE_HAVE_LIBC_PTHREAD  -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -MD -MT CMakeFiles/cmTC_0624f.dir/src.c.o -MF CMakeFiles/cmTC_0624f.dir/src.c.o.d -o CMakeFiles/cmTC_0624f.dir/src.c.o -c /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4kGMss/src.c
+        Linking C executable cmTC_0624f
+        /opt/miniconda3/envs/ros2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0624f.dir/link.txt --verbose=1
+        /opt/miniconda3/envs/ros2/bin/arm64-apple-darwin20.0.0-clang -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/miniconda3/envs/ros2/include  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/miniconda3/envs/ros2/lib -L/opt/miniconda3/envs/ros2/lib -L/opt/homebrew/opt/tcl-tk/lib  CMakeFiles/cmTC_0624f.dir/src.c.o -o cmTC_0624f
+        make[1]: Leaving directory '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/CMakeFiles/CMakeScratch/TryCompile-4kGMss'
         
       exitCode: 0
 ...

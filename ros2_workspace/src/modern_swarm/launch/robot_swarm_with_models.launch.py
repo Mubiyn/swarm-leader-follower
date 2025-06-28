@@ -23,6 +23,15 @@ def generate_launch_description():
         output='screen',
         parameters=[{'robot_description': open(urdf_path).read(), 'frame_prefix': 'leader/'}]
     )
+    # Leader joint state publisher
+    leader_joint_state_pub = Node(
+        package='joint_state_publisher',
+        executable='joint_state_publisher',
+        name='leader_joint_state_publisher',
+        namespace='leader',
+        output='screen',
+        parameters=[{'use_gui': False}]
+    )
     # Followers
     follower_nodes = []
     for i in range(1, 4):
@@ -33,6 +42,17 @@ def generate_launch_description():
             namespace=f'follower_{i}',
             output='screen',
             parameters=[{'robot_description': open(urdf_path).read(), 'frame_prefix': f'follower_{i}/'}]
+        ))
+    # Follower joint state publishers
+    follower_joint_state_pubs = []
+    for i in range(1, 4):
+        follower_joint_state_pubs.append(Node(
+            package='joint_state_publisher',
+            executable='joint_state_publisher',
+            name=f'follower_{i}_joint_state_publisher',
+            namespace=f'follower_{i}',
+            output='screen',
+            parameters=[{'use_gui': False}]
         ))
     # Swarm node
     swarm_node = Node(
@@ -52,7 +72,9 @@ def generate_launch_description():
     )
     return LaunchDescription([
         leader_state_pub,
+        leader_joint_state_pub,
         *follower_nodes,
+        *follower_joint_state_pubs,
         swarm_node,
         rviz_node
     ]) 
