@@ -1,0 +1,60 @@
+[0.025s] Invoking command in '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/miniconda3/envs/ros2 CONDA_PROMPT_MODIFIER=(ros2) SHLVL=3 VSCODE_ENV_PREPEND=PATH=/opt/miniconda3/envs/ros2/share/rubygems/bin\x3a/opt/miniconda3/envs/ros2/bin\x3a:PS1=(ros2) _=/usr/bin/env /opt/homebrew/bin/cmake --build /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm -- -j8 -l8
+[0.277s] Built target ament_cmake_python_symlink_modern_swarm
+[0.553s] running egg_info
+[0.561s] writing modern_swarm.egg-info/PKG-INFO
+[0.561s] writing dependency_links to modern_swarm.egg-info/dependency_links.txt
+[0.561s] writing top-level names to modern_swarm.egg-info/top_level.txt
+[0.584s] reading manifest file 'modern_swarm.egg-info/SOURCES.txt'
+[0.584s] writing manifest file 'modern_swarm.egg-info/SOURCES.txt'
+[0.619s] Built target ament_cmake_python_build_modern_swarm_egg
+[0.635s] Invoked command in '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/miniconda3/envs/ros2 CONDA_PROMPT_MODIFIER=(ros2) SHLVL=3 VSCODE_ENV_PREPEND=PATH=/opt/miniconda3/envs/ros2/share/rubygems/bin\x3a/opt/miniconda3/envs/ros2/bin\x3a:PS1=(ros2) _=/usr/bin/env /opt/homebrew/bin/cmake --build /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm -- -j8 -l8
+[0.805s] Invoking command in '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/miniconda3/envs/ros2 CONDA_PROMPT_MODIFIER=(ros2) SHLVL=3 VSCODE_ENV_PREPEND=PATH=/opt/miniconda3/envs/ros2/share/rubygems/bin\x3a/opt/miniconda3/envs/ros2/bin\x3a:PS1=(ros2) _=/usr/bin/env /opt/homebrew/bin/cmake --install /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm
+[0.811s] -- Install configuration: ""
+[0.814s] -- Execute custom install script
+[0.814s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/environment/pythonpath.sh
+[0.814s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/environment/pythonpath.dsv
+[0.815s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/python3.11/site-packages/modern_swarm-1.0.0-py3.11.egg-info/PKG-INFO
+[0.815s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/python3.11/site-packages/modern_swarm-1.0.0-py3.11.egg-info/SOURCES.txt
+[0.815s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/python3.11/site-packages/modern_swarm-1.0.0-py3.11.egg-info/dependency_links.txt
+[0.815s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/python3.11/site-packages/modern_swarm-1.0.0-py3.11.egg-info/top_level.txt
+[0.816s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/python3.11/site-packages/modern_swarm/__init__.py
+[0.816s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/python3.11/site-packages/modern_swarm/robot_simulator.py
+[0.816s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/python3.11/site-packages/modern_swarm/swarm_controller.py
+[0.816s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/modern_swarm/vision_node.py
+[0.816s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/modern_swarm/follower_controller_node.py
+[0.816s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/modern_swarm/unified_swarm_ros2.py
+[0.816s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/modern_swarm/test_ros2_integration.py
+[0.817s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/__pycache__/fast_track_migration.launch.cpython-310.pyc
+[0.817s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/__pycache__/simple_swarm_demo.launch.cpython-310.pyc
+[0.817s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/robot_swarm_with_models.launch.py
+[0.817s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/simple_gazebo_swarm.launch.py
+[0.817s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/simple_swarm_demo.launch.py
+[0.817s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/swarm_leader_follower.launch.py
+[0.817s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/unified_swarm_gazebo.launch.py
+[0.817s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/unified_swarm_rviz.launch.py
+[0.818s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//config/robot_params.yaml
+[0.818s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//config/simple_swarm.rviz
+[0.818s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//config/swarm_visualization.rviz
+[0.818s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//config/working_swarm.rviz
+[0.818s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//urdf/swarm_robot.urdf
+[0.818s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//urdf/swarm_robot.urdf.xacro
+[0.819s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//worlds/simple_swarm.world
+[0.819s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//worlds/swarm_arena.world
+[0.819s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/ament_index/resource_index/package_run_dependencies/modern_swarm
+[0.819s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/ament_index/resource_index/parent_prefix_path/modern_swarm
+[0.819s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/environment/ament_prefix_path.sh
+[0.819s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/environment/ament_prefix_path.dsv
+[0.820s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/environment/path.sh
+[0.820s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/environment/path.dsv
+[0.820s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/local_setup.bash
+[0.820s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/local_setup.sh
+[0.820s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/local_setup.zsh
+[0.820s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/local_setup.dsv
+[0.821s] -- Symlinking: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/package.dsv
+[0.835s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/ament_index/resource_index/packages/modern_swarm
+[0.836s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/cmake/modern_swarmConfig.cmake
+[0.836s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/cmake/modern_swarmConfig-version.cmake
+[0.836s] -- Up-to-date symlink: /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm/package.xml
+[0.862s] Listing 'lib/python3.11/site-packages/modern_swarm'...
+[0.862s] Can't list 'lib/python3.11/site-packages/modern_swarm'
+[0.867s] Invoked command in '/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/miniconda3/envs/ros2 CONDA_PROMPT_MODIFIER=(ros2) SHLVL=3 VSCODE_ENV_PREPEND=PATH=/opt/miniconda3/envs/ros2/share/rubygems/bin\x3a/opt/miniconda3/envs/ros2/bin\x3a:PS1=(ros2) _=/usr/bin/env /opt/homebrew/bin/cmake --install /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm

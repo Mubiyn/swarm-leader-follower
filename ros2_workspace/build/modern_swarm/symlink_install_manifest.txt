@@ -13,6 +13,7 @@
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/lib/modern_swarm/test_ros2_integration.py
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/__pycache__/fast_track_migration.launch.cpython-310.pyc
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/__pycache__/simple_swarm_demo.launch.cpython-310.pyc
+/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/robot_swarm_with_models.launch.py
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/simple_gazebo_swarm.launch.py
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/simple_swarm_demo.launch.py
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//launch/swarm_leader_follower.launch.py
@@ -22,6 +23,7 @@
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//config/simple_swarm.rviz
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//config/swarm_visualization.rviz
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//config/working_swarm.rviz
+/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//urdf/swarm_robot.urdf
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//urdf/swarm_robot.urdf.xacro
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//worlds/simple_swarm.world
 /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/install/modern_swarm/share/modern_swarm//worlds/swarm_arena.world

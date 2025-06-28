@@ -41,16 +41,14 @@ from typing import List, Dict, Tuple, Optional
 import cv2
 from cv_bridge import CvBridge
 from std_srvs.srv import SetBool
+import tf2_ros
+from geometry_msgs.msg import TransformStamped
 
 # Import our core logic
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../../demos/python'))
 from swarm_core import Robot, ProportionalController, get_formation_targets, VisionSystem, Obstacle, calculate_obstacle_avoidance, update_dynamic_obstacles, MultiRobotMPCController
-
-# Add TF2 imports
-from tf2_ros import StaticTransformBroadcaster
-from geometry_msgs.msg import TransformStamped
 
 
 class UnifiedSwarmROS2Node(Node):
@@ -90,7 +88,7 @@ class UnifiedSwarmROS2Node(Node):
         self.setup_ros_interface()
         
         # Setup static transform broadcaster for map frame
-        self.tf_broadcaster = StaticTransformBroadcaster(self)
+        self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
         self.publish_static_transform()
         
         # Setup timers
@@ -241,6 +239,7 @@ class UnifiedSwarmROS2Node(Node):
         if self.obstacles_enabled:
             update_dynamic_obstacles(self.dynamic_obstacles, self.dt)
         
+        self.publish_robot_transforms()
         self.time += self.dt
     
     def update_leader(self):
@@ -601,6 +600,32 @@ class UnifiedSwarmROS2Node(Node):
         q[3] = cy * cp * cr + sy * sp * sr
         
         return q
+    
+    def publish_robot_transforms(self):
+        # Publish map -> leader/base_link
+        self._publish_robot_tf(self.leader, 'leader')
+        for i, follower in enumerate(self.followers, 1):
+            self._publish_robot_tf(follower, f'follower_{i}')
+
+    def _publish_robot_tf(self, robot, ns):
+        t = TransformStamped()
+        t.header.stamp = self.get_clock().now().to_msg()
+        t.header.frame_id = 'map'
+        t.child_frame_id = f'{ns}/base_link'
+        t.transform.translation.x = robot.x
+        t.transform.translation.y = robot.y
+        t.transform.translation.z = 0.0
+        # Convert theta to quaternion (yaw only, roll=pitch=0)
+        yaw = robot.theta
+        qx = 0.0
+        qy = 0.0
+        qz = math.sin(yaw / 2.0)
+        qw = math.cos(yaw / 2.0)
+        t.transform.rotation.x = qx
+        t.transform.rotation.y = qy
+        t.transform.rotation.z = qz
+        t.transform.rotation.w = qw
+        self.tf_broadcaster.sendTransform(t)
     
     # Service callbacks
     def set_formation_callback(self, request, response):

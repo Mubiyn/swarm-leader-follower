@@ -8,8 +8,25 @@ Panels:
         - /Grid1
         - /Robot Markers1
         - /Obstacles1
+        - /Leader Model1
+        - /Leader Model1/Status1
+        - /Leader Model1/Mass Properties1
+        - /Follower 1 Model1
+        - /Follower 1 Model1/Status1
+        - /Follower 1 Model1/Mass Properties1
+        - /Follower 1 Model1/Description Topic1
+        - /Follower 2 Model1
+        - /Follower 2 Model1/Status1
+        - /Follower 2 Model1/Mass Properties1
+        - /Follower 2 Model1/Description Topic1
+        - /Follower 3 Model1
+        - /Follower 3 Model1/Status1
+        - /Follower 3 Model1/Mass Properties1
+        - /Follower 3 Model1/Description Topic1
+        - /TF1
+        - /TF1/Tree1
       Splitter Ratio: 0.5
-    Tree Height: 74
+    Tree Height: 622
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -73,6 +90,306 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /swarm/obstacles
       Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: true
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /leader/robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        caster_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        laser_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Mass Properties:
+        Inertia: false
+        Mass: false
+      Name: Leader Model
+      TF Prefix: leader
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: true
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /follower_1/robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        caster_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        laser_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Mass Properties:
+        Inertia: true
+        Mass: true
+      Name: Follower 1 Model
+      TF Prefix: follower_1
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: true
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /follower_2/robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        caster_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        laser_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Mass Properties:
+        Inertia: false
+        Mass: false
+      Name: Follower 2 Model
+      TF Prefix: follower_2
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: true
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /follower_3/robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        caster_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        laser_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Mass Properties:
+        Inertia: false
+        Mass: false
+      Name: Follower 3 Model
+      TF Prefix: follower_3
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        follower_1/base_link:
+          Value: true
+        follower_1/camera_link:
+          Value: true
+        follower_1/caster_wheel:
+          Value: true
+        follower_1/laser_link:
+          Value: true
+        follower_2/base_link:
+          Value: true
+        follower_2/camera_link:
+          Value: true
+        follower_2/caster_wheel:
+          Value: true
+        follower_2/laser_link:
+          Value: true
+        follower_3/base_link:
+          Value: true
+        follower_3/camera_link:
+          Value: true
+        follower_3/caster_wheel:
+          Value: true
+        follower_3/laser_link:
+          Value: true
+        leader/base_link:
+          Value: true
+        leader/camera_link:
+          Value: true
+        leader/caster_wheel:
+          Value: true
+        leader/laser_link:
+          Value: true
+        map:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        map:
+          follower_1/base_link:
+            follower_1/camera_link:
+              {}
+            follower_1/caster_wheel:
+              {}
+            follower_1/laser_link:
+              {}
+          follower_2/base_link:
+            follower_2/camera_link:
+              {}
+            follower_2/caster_wheel:
+              {}
+            follower_2/laser_link:
+              {}
+          follower_3/base_link:
+            follower_3/camera_link:
+              {}
+            follower_3/caster_wheel:
+              {}
+            follower_3/laser_link:
+              {}
+          leader/base_link:
+            leader/camera_link:
+              {}
+            leader/caster_wheel:
+              {}
+            leader/laser_link:
+              {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -119,7 +436,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 25
+      Distance: 19.263713836669922
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -134,10 +451,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.025397777557373
+      Pitch: 0.6053985953330994
       Target Frame: map
       Value: Orbit (rviz_default_plugins)
-      Yaw: 0.8253979682922363
+      Yaw: 0.5953924059867859
     Saved: ~
 Window Geometry:
   Displays:
@@ -145,7 +462,7 @@ Window Geometry:
   Height: 846
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000003e700000307fc0200000005fb000000100044006900730070006c006100790073010000002c000000e3000000e300fffffffb0000001200530065006c0065006300740069006f006e0100000110000000620000006200fffffffb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000173000000620000006200fffffffb0000000a0056006900650077007301000001d6000000e3000000c600fffffffb0000000800540069006d006501000002ba000000790000003700ffffff000000c80000030700000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000003e700000307fc0200000005fb000000100044006900730070006c006100790073010000002c00000307000000ab00fffffffb0000001200530065006c0065006300740069006f006e000000025d000000d60000006200fffffffb0000001e0054006f006f006c002000500072006f0070006500720074006900650073000000028b000000a80000006200fffffffb0000000a005600690065007700730000000248000000eb000000c600fffffffb0000000800540069006d006500000002ba000000790000003700ffffff000000c80000030700000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -156,4 +473,4 @@ Window Geometry:
     collapsed: false
   Width: 1200
   X: 100
-  Y: 100
+  Y: 99

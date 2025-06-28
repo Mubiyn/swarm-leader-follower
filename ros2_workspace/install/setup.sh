@@ -34,10 +34,6 @@ _colcon_prefix_chain_sh_source_script() {
 COLCON_CURRENT_PREFIX="/opt/miniconda3/envs/ros2"
 _colcon_prefix_chain_sh_source_script "$COLCON_CURRENT_PREFIX/local_setup.sh"
 
-# setting COLCON_CURRENT_PREFIX avoids relying on the build time prefix of the sourced script
-COLCON_CURRENT_PREFIX="/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace"
-_colcon_prefix_chain_sh_source_script "$COLCON_CURRENT_PREFIX/local_setup.sh"
-
 
 # source this prefix
 # setting COLCON_CURRENT_PREFIX avoids relying on the build time prefix of the sourced script

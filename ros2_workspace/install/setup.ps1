@@ -23,7 +23,6 @@ function _colcon_prefix_chain_powershell_source_script {
 
 # source chained prefixes
 _colcon_prefix_chain_powershell_source_script "/opt/miniconda3/envs/ros2\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace\local_setup.ps1"
 
 # source this prefix
 $env:COLCON_CURRENT_PREFIX=(Split-Path $PSCommandPath -Parent)
