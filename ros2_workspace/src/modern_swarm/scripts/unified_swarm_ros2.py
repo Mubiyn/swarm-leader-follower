@@ -52,10 +52,10 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../../../demos/python')
 from swarm_core import Robot, ProportionalController, get_formation_targets, VisionSystem, Obstacle, calculate_obstacle_avoidance, update_dynamic_obstacles, MultiRobotMPCController
 
 # Import advanced controllers
-from advanced_controllers import MPCController, EnhancedObstacleAvoidance, PerformanceMonitor
+from controllers import MPCController, EnhancedObstacleAvoidance, PerformanceMonitor
 
 # Import enhanced vision system
-from enhanced_vision_system import EnhancedVisionSystemCore
+from vision import EnhancedVisionSystemCore
 
 # Import interactive control and data logging components
 import json
@@ -69,7 +69,7 @@ from dataclasses import dataclass
 from enum import Enum
 
 # Import performance plotter
-from performance_plotter import PerformancePlotter
+from plotter import PerformancePlotter
 
 
 class ControlMode(Enum):

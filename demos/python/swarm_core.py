@@ -283,7 +283,7 @@ class MPCController:
             return self._simulated_mpc_control(current_state, target_position)
     
     def _real_mpc_control(self, current_state, target_position):
-        # This would use the real MPC from src/control/mpc_controller.py
+        # This would use the real MPC from mpc_controller.py (now in same directory)
         # For now, return simulated control
         return self._simulated_mpc_control(current_state, target_position)
     

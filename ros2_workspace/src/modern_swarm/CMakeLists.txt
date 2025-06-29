@@ -25,10 +25,7 @@ ament_python_install_package(${PROJECT_NAME})
 
 # Install Python scripts
 install(PROGRAMS
-  scripts/vision_node.py
-  scripts/follower_controller_node.py
   scripts/unified_swarm_ros2.py
-  scripts/test_ros2_integration.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

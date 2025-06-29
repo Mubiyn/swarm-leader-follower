@@ -28,8 +28,8 @@ import sys
 import os
 
 # Add the src directory to path for imports
-sys.path.append('src')
-from control.mpc_controller import MultiRobotMPCController
+# sys.path.append('src')  # No longer needed since file is in same directory
+from mpc_controller import MultiRobotMPCController
 
 class Robot:
     """Robot class with state management."""
