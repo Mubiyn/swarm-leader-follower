@@ -19,9 +19,10 @@ Panels:
         - /Follower 3 Model1
         - /Follower 3 Model1/Mass Properties1
         - /TF1
+        - /TF1/Frames1
         - /TF1/Tree1
       Splitter Ratio: 0.5
-    Tree Height: 351
+    Tree Height: 846
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -85,7 +86,7 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /swarm/obstacles
       Value: true
-    - Alpha: 1
+    - Alpha: 0.10000000149011612
       Class: rviz_default_plugins/RobotModel
       Collision Enabled: true
       Description File: ""
@@ -141,7 +142,7 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Alpha: 1
+    - Alpha: 0.10000000149011612
       Class: rviz_default_plugins/RobotModel
       Collision Enabled: true
       Description File: ""
@@ -197,7 +198,7 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Alpha: 1
+    - Alpha: 0.10000000149011612
       Class: rviz_default_plugins/RobotModel
       Collision Enabled: true
       Description File: ""
@@ -253,7 +254,7 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Alpha: 1
+    - Alpha: 0.10000000149011612
       Class: rviz_default_plugins/RobotModel
       Collision Enabled: true
       Description File: ""
@@ -314,6 +315,8 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        base_link:
+          Value: true
         follower_1/base_link:
           Value: true
         follower_1/camera_link:
@@ -352,9 +355,11 @@ Visualization Manager:
       Name: TF
       Show Arrows: false
       Show Axes: false
-      Show Names: true
+      Show Names: false
       Tree:
         map:
+          base_link:
+            {}
           follower_1/base_link:
             follower_1/camera_link:
               {}
@@ -446,18 +451,18 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4853988289833069
+      Pitch: 1.3353984355926514
       Target Frame: map
       Value: Orbit (rviz_default_plugins)
-      Yaw: 5.048563003540039
+      Yaw: 4.8685622215271
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: true
-  Height: 1041
+  Height: 1070
   Hide Left Dock: true
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000003e7000003cafc0200000005fb000000100044006900730070006c006100790073000000002c000003ca000000e300fffffffb0000001200530065006c0065006300740069006f006e000000025d000000d60000006200fffffffb0000001e0054006f006f006c002000500072006f0070006500720074006900650073000000028b000000a80000006200fffffffb0000000a005600690065007700730000000248000000eb000000c600fffffffb0000000800540069006d006500000002ba000000790000003700ffffff000006ae000003ca00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000003e7000003e7fc0200000005fb000000100044006900730070006c006100790073000000002c000003e7000000e300fffffffb0000001200530065006c0065006300740069006f006e000000025d000000d60000006200fffffffb0000001e0054006f006f006c002000500072006f0070006500720074006900650073000000028b000000a80000006200fffffffb0000000a005600690065007700730000000248000000eb000000c600fffffffb0000000800540069006d006500000002ba000000790000003700ffffff000006ae000003e700000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -468,4 +473,4 @@ Window Geometry:
     collapsed: false
   Width: 1710
   X: 0
-  Y: 43
+  Y: 42

@@ -55,7 +55,7 @@ from swarm_core import Robot, ProportionalController, get_formation_targets, Vis
 from advanced_controllers import MPCController, EnhancedObstacleAvoidance, PerformanceMonitor
 
 # Import enhanced vision system
-from enhanced_vision_system import EnhancedVisionSystem
+from enhanced_vision_system import EnhancedVisionSystemCore
 
 # Import interactive control and data logging components
 import json
@@ -194,6 +194,9 @@ class UnifiedSwarmROS2Node(Node):
     
     def initialize_system(self):
         """Initialize the swarm system"""
+        # Initialize vision system
+        self.enhanced_vision = EnhancedVisionSystemCore()
+        
         # Get parameters
         self.update_rate = self.get_parameter('update_rate').value
         self.dt = 1.0 / self.update_rate
@@ -209,7 +212,7 @@ class UnifiedSwarmROS2Node(Node):
         
         # System state
         self.current_formation = "triangle"
-        self.vision_enabled = False
+        self.vision_enabled = True  # Enable vision system by default
         self.obstacles_enabled = True  # Enable obstacle avoidance by default
         self.robot_collision_avoidance = True
         self.frame_count = 0  # For tracking vision metrics
@@ -234,7 +237,6 @@ class UnifiedSwarmROS2Node(Node):
         self.cv_bridge = CvBridge()
         
         # Enhanced vision system for real detection
-        self.enhanced_vision = EnhancedVisionSystem()
         self.detected_leader_pos = None
         self.detected_robot_positions = {}
         self.vision_detection_enabled = True
@@ -513,6 +515,25 @@ class UnifiedSwarmROS2Node(Node):
         if self.vision_enabled:
             all_robots = [self.leader] + self.followers
             self.camera_image = self.vision_system.create_synthetic_image(all_robots)
+            
+            # Process camera image with enhanced vision system
+            if self.camera_image is not None:
+                detections = self.enhanced_vision.process_image(self.camera_image)
+                
+                # Update detected positions
+                if detections:
+                    for robot_id, detection in detections.items():
+                        if robot_id == 0:  # Leader
+                            self.detected_leader_pos = (detection.x, detection.y)
+                        else:  # Followers
+                            self.detected_robot_positions[robot_id] = (detection.x, detection.y)
+                    
+                    # Use vision-based leader position for formation if available
+                    if 0 in detections:
+                        self.vision_leader_pos_for_formation = (detections[0].x, detections[0].y)
+                else:
+                    # Fallback to synthetic positions if no detections
+                    self.vision_leader_pos_for_formation = (self.leader.x, self.leader.y)
     
     def update_followers(self):
         """Update follower positions with advanced controllers and performance monitoring"""
@@ -529,10 +550,13 @@ class UnifiedSwarmROS2Node(Node):
         # Collect robot states for advanced controllers
         robot_states = [follower.get_state() for follower in self.followers]
         
+        # Initialize tracking variables
+        total_formation_error = 0.0
+        total_control_effort = 0.0
+        collision_events = 0
+        near_collision_events = 0
+        
         if self.controllers[self.current_controller_idx] == "Proportional":
-            total_formation_error = 0.0
-            total_control_effort = 0.0
-            
             for i, follower in enumerate(self.followers):
                 target_pos = formation_targets[i]
                 control = self.prop_controller.compute_control(follower.get_state(), target_pos)
@@ -556,20 +580,31 @@ class UnifiedSwarmROS2Node(Node):
                 error = math.sqrt((follower.x - target_pos[0])**2 + (follower.y - target_pos[1])**2)
                 total_formation_error += error
                 total_control_effort += control[0]**2 + control[1]**2
-            
-            # Update performance monitor
-            avg_formation_error = total_formation_error / len(self.followers)
-            avg_control_effort = total_control_effort / len(self.followers)
-            self.performance_monitor.update_metrics(avg_formation_error, avg_control_effort, 0.0)
+                
+                # Track formation error over time for this specific robot
+                formation_error_data = {
+                    'timestamp': time.time(),
+                    'robot_id': f"follower_{i}",
+                    'error': error,
+                    'target_x': target_pos[0],
+                    'target_y': target_pos[1],
+                    'actual_x': follower.x,
+                    'actual_y': follower.y
+                }
+                self.formation_errors.append(formation_error_data)
+                
+                # Check for collisions and near-collisions
+                collision_detected, near_collision = self.check_collision_status(follower, i)
+                if collision_detected:
+                    collision_events += 1
+                if near_collision:
+                    near_collision_events += 1
         
         elif self.controllers[self.current_controller_idx] == "MPC":
             # Use advanced MPC controller
             start_time = time.time()
             controls = self.mpc_controller.compute_control(robot_states, formation_targets)
             solve_time = time.time() - start_time
-            
-            total_formation_error = 0.0
-            total_control_effort = 0.0
             
             for i, (follower, control) in enumerate(zip(self.followers, controls)):
                 # Apply enhanced obstacle avoidance if enabled
@@ -592,11 +627,99 @@ class UnifiedSwarmROS2Node(Node):
                 error = math.sqrt((follower.x - target_pos[0])**2 + (follower.y - target_pos[1])**2)
                 total_formation_error += error
                 total_control_effort += control[0]**2 + control[1]**2
+                
+                # Track formation error over time for this specific robot
+                formation_error_data = {
+                    'timestamp': time.time(),
+                    'robot_id': f"follower_{i}",
+                    'error': error,
+                    'target_x': target_pos[0],
+                    'target_y': target_pos[1],
+                    'actual_x': follower.x,
+                    'actual_y': follower.y
+                }
+                self.formation_errors.append(formation_error_data)
+                
+                # Check for collisions and near-collisions
+                collision_detected, near_collision = self.check_collision_status(follower, i)
+                if collision_detected:
+                    collision_events += 1
+                if near_collision:
+                    near_collision_events += 1
             
-            # Update performance monitor
+            # Update performance monitor with MPC solve time
             avg_formation_error = total_formation_error / len(self.followers)
             avg_control_effort = total_control_effort / len(self.followers)
             self.performance_monitor.update_metrics(avg_formation_error, avg_control_effort, solve_time)
+        else:
+            # Update performance monitor for proportional controller
+            avg_formation_error = total_formation_error / len(self.followers)
+            avg_control_effort = total_control_effort / len(self.followers)
+            self.performance_monitor.update_metrics(avg_formation_error, avg_control_effort, 0.0)
+        
+        # Track collision statistics
+        collision_stats = {
+            'timestamp': time.time(),
+            'collision_events': collision_events,
+            'near_collision_events': near_collision_events,
+            'total_robots': len(self.followers) + 1  # Include leader
+        }
+        
+        # Store collision statistics
+        if not hasattr(self, 'collision_statistics'):
+            self.collision_statistics = deque(maxlen=1000)
+        self.collision_statistics.append(collision_stats)
+        
+        # Log collision events if they occur
+        if collision_events > 0:
+            collision_event = SystemEvent(
+                timestamp=time.time(),
+                event_type='collision_detected',
+                severity=LogLevel.WARNING,
+                description=f'Collision detected: {collision_events} events',
+                data={'collision_events': collision_events, 'near_collision_events': near_collision_events}
+            )
+            self.log_event(collision_event)
+    
+    def check_collision_status(self, robot, robot_index):
+        """Check if a robot is in collision or near-collision state"""
+        collision_detected = False
+        near_collision = False
+        
+        # Check collision with leader
+        dx = robot.x - self.leader.x
+        dy = robot.y - self.leader.y
+        distance = math.sqrt(dx**2 + dy**2)
+        
+        if distance < 0.5:  # Collision threshold
+            collision_detected = True
+        elif distance < self.min_robot_distance:  # Near collision threshold
+            near_collision = True
+        
+        # Check collision with other followers
+        for j, other_robot in enumerate(self.followers):
+            if j != robot_index:
+                dx = robot.x - other_robot.x
+                dy = robot.y - other_robot.y
+                distance = math.sqrt(dx**2 + dy**2)
+                
+                if distance < 0.5:  # Collision threshold
+                    collision_detected = True
+                elif distance < self.min_robot_distance:  # Near collision threshold
+                    near_collision = True
+        
+        # Check collision with obstacles
+        for obstacle in self.static_obstacles + self.dynamic_obstacles:
+            dx = robot.x - obstacle.x
+            dy = robot.y - obstacle.y
+            distance = math.sqrt(dx**2 + dy**2)
+            
+            if distance < obstacle.radius:  # Collision with obstacle
+                collision_detected = True
+            elif distance < obstacle.radius + 0.5:  # Near collision with obstacle
+                near_collision = True
+        
+        return collision_detected, near_collision
     
     def calculate_leader_avoidance(self):
         """Calculate avoidance forces to prevent leader from colliding with followers"""
@@ -1455,16 +1578,68 @@ class UnifiedSwarmROS2Node(Node):
                 }
                 self.log_metric(metric)
             
-            # Log formation errors
+            # Log formation errors with detailed tracking
             if hasattr(self, 'formation_errors') and self.formation_errors:
-                for error_data in list(self.formation_errors)[-10:]:
+                # Log recent formation errors for each robot
+                recent_errors = list(self.formation_errors)[-len(self.followers):]  # Last error for each robot
+                for error_data in recent_errors:
                     metric = {
                         'timestamp': error_data['timestamp'],
                         'robot_id': error_data['robot_id'],
                         'metric_type': 'formation_error',
-                        'value': error_data['error']
+                        'value': error_data['error'],
+                        'metadata': {
+                            'target_x': error_data['target_x'],
+                            'target_y': error_data['target_y'],
+                            'actual_x': error_data['actual_x'],
+                            'actual_y': error_data['actual_y']
+                        }
                     }
                     self.log_metric(metric)
+                
+                # Log average formation error across all robots
+                if len(recent_errors) > 0:
+                    avg_error = sum(e['error'] for e in recent_errors) / len(recent_errors)
+                    metric = {
+                        'timestamp': time.time(),
+                        'robot_id': 'system',
+                        'metric_type': 'average_formation_error',
+                        'value': avg_error,
+                        'metadata': {'num_robots': len(recent_errors)}
+                    }
+                    self.log_metric(metric)
+            
+            # Log collision statistics
+            if hasattr(self, 'collision_statistics') and self.collision_statistics:
+                recent_collision_stats = list(self.collision_statistics)[-1]  # Most recent collision stats
+                metric = {
+                    'timestamp': recent_collision_stats['timestamp'],
+                    'robot_id': 'system',
+                    'metric_type': 'collision_statistics',
+                    'value': {
+                        'collision_events': recent_collision_stats['collision_events'],
+                        'near_collision_events': recent_collision_stats['near_collision_events'],
+                        'total_robots': recent_collision_stats['total_robots']
+                    }
+                }
+                self.log_metric(metric)
+                
+                # Log collision rate over time
+                if len(self.collision_statistics) > 1:
+                    # Calculate collision rate over last 10 seconds
+                    current_time = time.time()
+                    recent_collisions = [s for s in self.collision_statistics if current_time - s['timestamp'] <= 10.0]
+                    if recent_collisions:
+                        total_collisions = sum(s['collision_events'] for s in recent_collisions)
+                        collision_rate = total_collisions / 10.0  # Collisions per second
+                        metric = {
+                            'timestamp': current_time,
+                            'robot_id': 'system',
+                            'metric_type': 'collision_rate',
+                            'value': collision_rate,
+                            'metadata': {'time_window': 10.0, 'total_collisions': total_collisions}
+                        }
+                        self.log_metric(metric)
             
             # Log performance metrics
             if hasattr(self, 'performance_monitor'):
@@ -1476,6 +1651,31 @@ class UnifiedSwarmROS2Node(Node):
                     'value': perf_metrics
                 }
                 self.log_metric(metric)
+                
+            # Log vision metrics
+            if hasattr(self, 'enhanced_vision'):
+                vision_metrics = self.enhanced_vision.get_performance_metrics()
+                metric = {
+                    'timestamp': time.time(),
+                    'robot_id': 'vision_system',
+                    'metric_type': 'vision_performance',
+                    'value': vision_metrics
+                }
+                self.log_metric(metric)
+                
+            # Log controller-specific metrics
+            current_controller = self.controllers[self.current_controller_idx]
+            metric = {
+                'timestamp': time.time(),
+                'robot_id': 'system',
+                'metric_type': 'controller_status',
+                'value': {
+                    'current_controller': current_controller,
+                    'controller_index': self.current_controller_idx,
+                    'total_controllers': len(self.controllers)
+                }
+            }
+            self.log_metric(metric)
                 
         except Exception as e:
             self.get_logger().error(f"Error logging system metrics: {e}")
@@ -1738,10 +1938,64 @@ class UnifiedSwarmROS2Node(Node):
     def generate_analysis_results(self):
         """Generate comprehensive analysis results"""
         try:
+            # Calculate collision statistics
+            collision_stats = {}
+            if hasattr(self, 'collision_statistics') and self.collision_statistics:
+                recent_collisions = list(self.collision_statistics)[-100:]  # Last 100 collision records
+                if recent_collisions:
+                    total_collisions = sum(s['collision_events'] for s in recent_collisions)
+                    total_near_collisions = sum(s['near_collision_events'] for s in recent_collisions)
+                    collision_rate = total_collisions / len(recent_collisions) if recent_collisions else 0
+                    near_collision_rate = total_near_collisions / len(recent_collisions) if recent_collisions else 0
+                    
+                    collision_stats = {
+                        'total_collisions': total_collisions,
+                        'total_near_collisions': total_near_collisions,
+                        'collision_rate': collision_rate,
+                        'near_collision_rate': near_collision_rate,
+                        'safety_score': max(0, 100 - (total_collisions * 10 + total_near_collisions * 5))
+                    }
+            
+            # Calculate formation error trends
+            formation_trends = {}
+            if hasattr(self, 'formation_errors') and self.formation_errors:
+                recent_errors = list(self.formation_errors)[-50:]  # Last 50 formation errors
+                if recent_errors:
+                    # Group errors by robot
+                    robot_errors = {}
+                    for error in recent_errors:
+                        robot_id = error['robot_id']
+                        if robot_id not in robot_errors:
+                            robot_errors[robot_id] = []
+                        robot_errors[robot_id].append(error['error'])
+                    
+                    # Calculate trends for each robot
+                    for robot_id, errors in robot_errors.items():
+                        if len(errors) >= 10:
+                            early_errors = errors[:len(errors)//2]
+                            late_errors = errors[len(errors)//2:]
+                            early_avg = np.mean(early_errors)
+                            late_avg = np.mean(late_errors)
+                            
+                            if late_avg < early_avg * 0.9:
+                                trend = 'improving'
+                            elif late_avg > early_avg * 1.1:
+                                trend = 'worsening'
+                            else:
+                                trend = 'stable'
+                            
+                            formation_trends[robot_id] = {
+                                'current_avg': np.mean(errors),
+                                'trend': trend,
+                                'improvement': (early_avg - late_avg) / early_avg * 100 if early_avg > 0 else 0
+                            }
+            
             analysis = {
                 'timestamp': time.time(),
                 'performance_stats': self.analysis_results.get('performance_stats', {}),
                 'formation_error_stats': self.analysis_results.get('formation_error_stats', {}),
+                'collision_statistics': collision_stats,
+                'formation_trends': formation_trends,
                 'trend_analysis': self.trend_data,
                 'system_health': self.assess_system_health(),
                 'recommendations': self.generate_recommendations()
@@ -1765,6 +2019,24 @@ class UnifiedSwarmROS2Node(Node):
                     health_score -= 20
                     issues.append(f"High formation error: {mean_error:.2f}")
             
+            # Check collision statistics
+            if hasattr(self, 'collision_statistics') and self.collision_statistics:
+                recent_collisions = list(self.collision_statistics)[-50:]  # Last 50 collision records
+                if recent_collisions:
+                    total_collisions = sum(s['collision_events'] for s in recent_collisions)
+                    total_near_collisions = sum(s['near_collision_events'] for s in recent_collisions)
+                    
+                    if total_collisions > 5:
+                        health_score -= 30
+                        issues.append(f"High collision rate: {total_collisions} collisions")
+                    elif total_collisions > 2:
+                        health_score -= 15
+                        issues.append(f"Moderate collision rate: {total_collisions} collisions")
+                    
+                    if total_near_collisions > 20:
+                        health_score -= 10
+                        issues.append(f"High near-collision rate: {total_near_collisions} events")
+            
             # Check performance metrics
             if 'performance_stats' in self.analysis_results:
                 stats = self.analysis_results['performance_stats']
@@ -1783,6 +2055,15 @@ class UnifiedSwarmROS2Node(Node):
                 if recent_events:
                     health_score -= len(recent_events) * 5
                     issues.append(f"{len(recent_events)} recent critical events")
+            
+            # Check formation trends
+            if 'formation_trends' in self.analysis_results.get('comprehensive', {}):
+                formation_trends = self.analysis_results['comprehensive']['formation_trends']
+                worsening_robots = [robot_id for robot_id, trend in formation_trends.items() 
+                                  if trend['trend'] == 'worsening']
+                if worsening_robots:
+                    health_score -= len(worsening_robots) * 5
+                    issues.append(f"Formation worsening for robots: {worsening_robots}")
             
             return {
                 'score': max(0.0, health_score),
@@ -1806,6 +2087,35 @@ class UnifiedSwarmROS2Node(Node):
                     recommendations.append("Consider increasing formation control gains")
                     recommendations.append("Check for obstacles interfering with formation")
             
+            # Check collision statistics
+            if hasattr(self, 'collision_statistics') and self.collision_statistics:
+                recent_collisions = list(self.collision_statistics)[-50:]
+                if recent_collisions:
+                    total_collisions = sum(s['collision_events'] for s in recent_collisions)
+                    total_near_collisions = sum(s['near_collision_events'] for s in recent_collisions)
+                    
+                    if total_collisions > 5:
+                        recommendations.append("🚨 CRITICAL: High collision rate detected - consider emergency stop")
+                        recommendations.append("Increase collision avoidance strength")
+                        recommendations.append("Reduce robot speeds to improve safety")
+                    elif total_collisions > 2:
+                        recommendations.append("⚠️ Moderate collision rate - increase safety margins")
+                        recommendations.append("Review obstacle avoidance parameters")
+                    
+                    if total_near_collisions > 20:
+                        recommendations.append("High near-collision rate - increase minimum robot distance")
+                        recommendations.append("Consider reducing formation density")
+            
+            # Check formation trends
+            if 'formation_trends' in self.analysis_results.get('comprehensive', {}):
+                formation_trends = self.analysis_results['comprehensive']['formation_trends']
+                worsening_robots = [robot_id for robot_id, trend in formation_trends.items() 
+                                  if trend['trend'] == 'worsening']
+                if worsening_robots:
+                    recommendations.append(f"Formation performance worsening for robots: {worsening_robots}")
+                    recommendations.append("Consider switching to MPC controller for better performance")
+                    recommendations.append("Check for sensor issues on affected robots")
+            
             # Check obstacle avoidance
             if 'performance_stats' in self.analysis_results:
                 stats = self.analysis_results['performance_stats']
@@ -1819,6 +2129,13 @@ class UnifiedSwarmROS2Node(Node):
                 if stats.get('avg_vision_accuracy', 1.0) < 0.8:
                     recommendations.append("Improve lighting conditions for vision system")
                     recommendations.append("Consider recalibrating vision sensors")
+            
+            # General recommendations based on controller
+            current_controller = self.controllers[self.current_controller_idx]
+            if current_controller == "Proportional":
+                recommendations.append("Consider switching to MPC controller for better performance")
+            elif current_controller == "MPC":
+                recommendations.append("MPC controller active - monitor computational load")
             
             return recommendations
             

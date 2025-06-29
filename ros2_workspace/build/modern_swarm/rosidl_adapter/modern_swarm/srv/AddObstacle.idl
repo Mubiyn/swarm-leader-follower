@@ -1,0 +1,52 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from modern_swarm/srv/AddObstacle.srv
+// generated code does not contain a copyright notice
+
+
+module modern_swarm {
+  module srv {
+    @verbatim (language="comment", text=
+      "AddObstacle service definition" "\n"
+      "Request: obstacle parameters")
+    struct AddObstacle_Request {
+      @verbatim (language="comment", text=
+        "X position of obstacle")
+      double x;
+
+      @verbatim (language="comment", text=
+        "Y position of obstacle")
+      double y;
+
+      @verbatim (language="comment", text=
+        "Obstacle radius")
+      double radius;
+
+      @verbatim (language="comment", text=
+        "\"static\", \"dynamic\"")
+      string obstacle_type;
+
+      @verbatim (language="comment", text=
+        "X velocity for dynamic obstacles")
+      double velocity_x;
+
+      @verbatim (language="comment", text=
+        "Y velocity for dynamic obstacles")
+      double velocity_y;
+    };
+    @verbatim (language="comment", text=
+      "Response: success status and message")
+    struct AddObstacle_Response {
+      @verbatim (language="comment", text=
+        "True if obstacle was added successfully")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "Status message or error description")
+      string message;
+
+      @verbatim (language="comment", text=
+        "Unique ID of the added obstacle")
+      int32 obstacle_id;
+    };
+  };
+};

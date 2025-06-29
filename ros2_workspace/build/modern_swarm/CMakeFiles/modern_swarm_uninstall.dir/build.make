@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/miniconda3/envs/ros2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/bin/cmake
 
 # The command to remove a file.
-RM = /opt/miniconda3/envs/ros2/bin/cmake -E rm -f
+RM = /opt/homebrew/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ include CMakeFiles/modern_swarm_uninstall.dir/compiler_depend.make
 include CMakeFiles/modern_swarm_uninstall.dir/progress.make
 
 CMakeFiles/modern_swarm_uninstall:
-	/opt/miniconda3/envs/ros2/bin/cmake -P /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/opt/homebrew/bin/cmake -P /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 CMakeFiles/modern_swarm_uninstall.dir/codegen:
 .PHONY : CMakeFiles/modern_swarm_uninstall.dir/codegen

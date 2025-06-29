@@ -17,7 +17,7 @@ import numpy as np
 import cv2
 import math
 import time
-from typing import List, Dict, Tuple, Optional, NamedTuple
+from typing import List, Dict, Tuple, Optional, NamedTuple, Any
 from dataclasses import dataclass
 from enum import Enum
 import rclpy
@@ -30,6 +30,7 @@ from visualization_msgs.msg import Marker, MarkerArray
 from cv_bridge import CvBridge
 import tf2_ros
 from geometry_msgs.msg import TransformStamped
+from collections import deque
 
 
 class DetectionConfidence(Enum):
@@ -705,6 +706,449 @@ class EnhancedVisionSystem(Node):
         ]
         
         self.vision_metrics_pub.publish(metrics_msg)
+    
+    def get_performance_metrics(self) -> Dict[str, Any]:
+        """Get current vision system performance metrics"""
+        return {
+            'accuracy': self.vision_metrics.average_confidence * 100.0,  # Convert to percentage
+            'detection_count': self.vision_metrics.total_detections,
+            'false_positives': self.vision_metrics.false_positives,
+            'missed_detections': self.vision_metrics.missed_detections,
+            'detection_rate': self.vision_metrics.detection_rate,
+            'processing_time': self.vision_metrics.processing_time,
+            'frame_count': self.frame_count
+        }
+
+
+class EnhancedVisionSystemCore:
+    """Core vision system functionality without ROS2 dependencies"""
+    
+    def __init__(self):
+        """Initialize the core vision system"""
+        # Vision parameters
+        self.vision_enabled = True
+        self.color_detection_enabled = True
+        self.motion_detection_enabled = True
+        self.confidence_threshold = 0.6
+        self.min_contour_area = 100
+        self.max_contour_area = 5000
+        self.motion_threshold = 25
+        
+        # Robot colors for detection
+        self.robot_colors = {
+            0: 'red',      # Leader
+            1: 'blue',     # Follower 1
+            2: 'green',    # Follower 2
+            3: 'yellow'    # Follower 3
+        }
+        
+        # Color ranges for HSV detection
+        self.color_ranges = {
+            'red': {
+                'lower': np.array([0, 100, 100]),
+                'upper': np.array([10, 255, 255]),
+                'lower2': np.array([160, 100, 100]),
+                'upper2': np.array([180, 255, 255])
+            },
+            'blue': {
+                'lower': np.array([100, 100, 100]),
+                'upper': np.array([130, 255, 255])
+            },
+            'green': {
+                'lower': np.array([40, 100, 100]),
+                'upper': np.array([80, 255, 255])
+            },
+            'yellow': {
+                'lower': np.array([20, 100, 100]),
+                'upper': np.array([40, 255, 255])
+            }
+        }
+        
+        # Detection state
+        self.last_detections = {}
+        self.detection_history = {robot_id: deque(maxlen=10) for robot_id in self.robot_colors.keys()}
+        self.previous_frame = None
+        
+        # Performance metrics
+        self.vision_metrics = VisionMetrics(
+            detection_rate=0.0,
+            average_confidence=0.0,
+            processing_time=0.0,
+            false_positives=0,
+            missed_detections=0,
+            total_detections=0
+        )
+        self.frame_count = 0
+        self.detection_count = 0
+    
+    def process_image(self, image: np.ndarray) -> Dict[int, RobotDetection]:
+        """Process an image and return detections"""
+        if not self.vision_enabled:
+            return {}
+        
+        try:
+            start_time = time.time()
+            
+            # Process the image for robot detection
+            detections = self.detect_robots(image)
+            
+            # Update detection history
+            self.update_detection_history(detections)
+            
+            # Store detections for publishing
+            self.last_detections = {det.robot_id: det for det in detections}
+            
+            # Update metrics
+            self.update_vision_metrics(len(detections))
+            
+            # Update processing time
+            self.vision_metrics.processing_time = time.time() - start_time
+            
+            return self.last_detections
+            
+        except Exception as e:
+            print(f"Error processing camera image: {e}")
+            return {}
+    
+    def detect_robots(self, image: np.ndarray) -> List[RobotDetection]:
+        """Detect all robots in the image using multiple detection methods"""
+        detections = []
+        current_time = time.time()
+        
+        # Method 1: Color-based detection
+        if self.color_detection_enabled:
+            color_detections = self.color_based_detection(image)
+            detections.extend(color_detections)
+        
+        # Method 2: Motion-based detection (if enabled and previous frame available)
+        if self.motion_detection_enabled and self.previous_frame is not None:
+            motion_detections = self.motion_based_detection(image)
+            detections.extend(motion_detections)
+        
+        # Method 3: Contour-based detection (fallback)
+        if not detections:
+            contour_detections = self.contour_based_detection(image)
+            detections.extend(contour_detections)
+        
+        # Filter and validate detections
+        valid_detections = self.filter_detections(detections)
+        
+        # Update previous frame for motion detection
+        self.previous_frame = image.copy()
+        
+        return valid_detections
+    
+    def color_based_detection(self, image: np.ndarray) -> List[RobotDetection]:
+        """Detect robots using color-based segmentation"""
+        detections = []
+        hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+        current_time = time.time()
+        
+        for robot_id, target_color in self.robot_colors.items():
+            if target_color not in self.color_ranges:
+                continue
+            
+            color_range = self.color_ranges[target_color]
+            
+            # Create mask for target color
+            if target_color == 'red':
+                # Red wraps around HSV, so we need two masks
+                mask1 = cv2.inRange(hsv, color_range['lower'], color_range['upper'])
+                mask2 = cv2.inRange(hsv, color_range['lower2'], color_range['upper2'])
+                mask = cv2.bitwise_or(mask1, mask2)
+            else:
+                mask = cv2.inRange(hsv, color_range['lower'], color_range['upper'])
+            
+            # Find contours
+            contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            
+            if contours:
+                # Find largest contour for this color
+                largest_contour = max(contours, key=cv2.contourArea)
+                area = cv2.contourArea(largest_contour)
+                
+                if self.min_contour_area <= area <= self.max_contour_area:
+                    # Get centroid
+                    M = cv2.moments(largest_contour)
+                    if M["m00"] > 0:
+                        pixel_x = int(M["m10"] / M["m00"])
+                        pixel_y = int(M["m01"] / M["m00"])
+                        
+                        # Convert to world coordinates
+                        world_x, world_y = self.pixel_to_world(pixel_x, pixel_y)
+                        
+                        # Estimate orientation from contour
+                        theta = self.estimate_orientation(largest_contour, pixel_x, pixel_y)
+                        
+                        # Calculate confidence based on area and color match
+                        confidence = self.calculate_color_confidence(area, target_color, mask, pixel_x, pixel_y)
+                        
+                        detection = RobotDetection(
+                            robot_id=robot_id,
+                            x=world_x,
+                            y=world_y,
+                            theta=theta,
+                            color=target_color,
+                            confidence=confidence,
+                            pixel_position=(pixel_x, pixel_y),
+                            contour_area=area,
+                            detection_time=current_time
+                        )
+                        detections.append(detection)
+        
+        return detections
+    
+    def motion_based_detection(self, image: np.ndarray) -> List[RobotDetection]:
+        """Detect robots using motion detection"""
+        detections = []
+        current_time = time.time()
+        
+        # Convert to grayscale
+        gray_current = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        gray_previous = cv2.cvtColor(self.previous_frame, cv2.COLOR_BGR2GRAY)
+        
+        # Calculate frame difference
+        frame_diff = cv2.absdiff(gray_current, gray_previous)
+        
+        # Apply threshold
+        _, thresh = cv2.threshold(frame_diff, self.motion_threshold, 255, cv2.THRESH_BINARY)
+        
+        # Find contours in motion areas
+        contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        
+        for contour in contours:
+            area = cv2.contourArea(contour)
+            if self.min_contour_area <= area <= self.max_contour_area:
+                M = cv2.moments(contour)
+                if M["m00"] > 0:
+                    pixel_x = int(M["m10"] / M["m00"])
+                    pixel_y = int(M["m01"] / M["m00"])
+                    
+                    # Convert to world coordinates
+                    world_x, world_y = self.pixel_to_world(pixel_x, pixel_y)
+                    
+                    # Estimate orientation
+                    theta = self.estimate_orientation(contour, pixel_x, pixel_y)
+                    
+                    # For motion detection, we don't know the robot ID, so assign based on position
+                    robot_id = self.assign_robot_id_by_position(world_x, world_y)
+                    color = self.robot_colors.get(robot_id, 'unknown')
+                    
+                    detection = RobotDetection(
+                        robot_id=robot_id,
+                        x=world_x,
+                        y=world_y,
+                        theta=theta,
+                        color=color,
+                        confidence=DetectionConfidence.MEDIUM,
+                        pixel_position=(pixel_x, pixel_y),
+                        contour_area=area,
+                        detection_time=current_time
+                    )
+                    detections.append(detection)
+        
+        return detections
+    
+    def contour_based_detection(self, image: np.ndarray) -> List[RobotDetection]:
+        """Fallback detection using general contour analysis"""
+        detections = []
+        current_time = time.time()
+        
+        # Convert to grayscale
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        
+        # Apply Gaussian blur
+        blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+        
+        # Find edges
+        edges = cv2.Canny(blurred, 50, 150)
+        
+        # Find contours
+        contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        
+        for contour in contours:
+            area = cv2.contourArea(contour)
+            if self.min_contour_area <= area <= self.max_contour_area:
+                M = cv2.moments(contour)
+                if M["m00"] > 0:
+                    pixel_x = int(M["m10"] / M["m00"])
+                    pixel_y = int(M["m01"] / M["m00"])
+                    
+                    # Convert to world coordinates
+                    world_x, world_y = self.pixel_to_world(pixel_x, pixel_y)
+                    
+                    # Estimate orientation
+                    theta = self.estimate_orientation(contour, pixel_x, pixel_y)
+                    
+                    # Assign robot ID based on position
+                    robot_id = self.assign_robot_id_by_position(world_x, world_y)
+                    color = self.robot_colors.get(robot_id, 'unknown')
+                    
+                    detection = RobotDetection(
+                        robot_id=robot_id,
+                        x=world_x,
+                        y=world_y,
+                        theta=theta,
+                        color=color,
+                        confidence=DetectionConfidence.LOW,
+                        pixel_position=(pixel_x, pixel_y),
+                        contour_area=area,
+                        detection_time=current_time
+                    )
+                    detections.append(detection)
+        
+        return detections
+    
+    def filter_detections(self, detections: List[RobotDetection]) -> List[RobotDetection]:
+        """Filter and validate detections"""
+        valid_detections = []
+        
+        for detection in detections:
+            # Check confidence threshold
+            if detection.confidence.value >= self.confidence_threshold:
+                valid_detections.append(detection)
+        
+        return valid_detections
+    
+    def update_detection_history(self, detections: List[RobotDetection]):
+        """Update detection history for smoothing"""
+        for detection in detections:
+            self.detection_history[detection.robot_id].append(detection)
+    
+    def get_smoothed_position(self, robot_id: int) -> Optional[Tuple[float, float]]:
+        """Get smoothed position for a robot based on detection history"""
+        if robot_id not in self.detection_history or not self.detection_history[robot_id]:
+            return None
+        
+        # Calculate average position from recent detections
+        recent_detections = list(self.detection_history[robot_id])[-5:]  # Last 5 detections
+        if not recent_detections:
+            return None
+        
+        avg_x = sum(det.x for det in recent_detections) / len(recent_detections)
+        avg_y = sum(det.y for det in recent_detections) / len(recent_detections)
+        
+        return (avg_x, avg_y)
+    
+    def get_leader_position(self) -> Optional[Tuple[float, float]]:
+        """Get the detected leader position"""
+        return self.get_smoothed_position(0)  # Leader has ID 0
+    
+    def get_all_robot_positions(self) -> Dict[int, Tuple[float, float]]:
+        """Get positions of all detected robots"""
+        positions = {}
+        for robot_id in self.robot_colors.keys():
+            pos = self.get_smoothed_position(robot_id)
+            if pos:
+                positions[robot_id] = pos
+        return positions
+    
+    def pixel_to_world(self, pixel_x: int, pixel_y: int) -> Tuple[float, float]:
+        """Convert pixel coordinates to world coordinates"""
+        # Simple linear mapping (assuming 640x480 camera)
+        world_x = (pixel_x - 320) * 0.01  # Scale factor
+        world_y = (240 - pixel_y) * 0.01  # Invert Y and scale
+        return (world_x, world_y)
+    
+    def world_to_pixel(self, world_x: float, world_y: float) -> Tuple[int, int]:
+        """Convert world coordinates to pixel coordinates"""
+        pixel_x = int(world_x / 0.01 + 320)
+        pixel_y = int(240 - world_y / 0.01)
+        return (pixel_x, pixel_y)
+    
+    def estimate_orientation(self, contour: np.ndarray, center_x: int, center_y: int) -> float:
+        """Estimate robot orientation from contour"""
+        try:
+            # Fit ellipse to contour
+            if len(contour) >= 5:
+                ellipse = cv2.fitEllipse(contour)
+                angle = ellipse[2]  # Angle in degrees
+                return math.radians(angle)
+        except:
+            pass
+        
+        # Fallback: use contour moments
+        try:
+            M = cv2.moments(contour)
+            if M["mu20"] != M["mu02"]:
+                angle = 0.5 * math.atan2(2 * M["mu11"], M["mu20"] - M["mu02"])
+                return angle
+        except:
+            pass
+        
+        return 0.0
+    
+    def calculate_color_confidence(self, area: float, target_color: str, mask: np.ndarray, 
+                                 center_x: int, center_y: int) -> DetectionConfidence:
+        """Calculate confidence based on area and color match"""
+        # Area confidence (normalized)
+        area_confidence = min(area / self.max_contour_area, 1.0)
+        
+        # Color confidence (check region around center)
+        region_size = 20
+        x1 = max(0, center_x - region_size)
+        x2 = min(mask.shape[1], center_x + region_size)
+        y1 = max(0, center_y - region_size)
+        y2 = min(mask.shape[0], center_y + region_size)
+        
+        region = mask[y1:y2, x1:x2]
+        color_ratio = np.sum(region > 0) / region.size if region.size > 0 else 0.0
+        
+        # Combined confidence
+        confidence = (area_confidence + color_ratio) / 2.0
+        
+        if confidence > 0.8:
+            return DetectionConfidence.HIGH
+        elif confidence > 0.6:
+            return DetectionConfidence.MEDIUM
+        elif confidence > 0.4:
+            return DetectionConfidence.LOW
+        else:
+            return DetectionConfidence.NONE
+    
+    def assign_robot_id_by_position(self, world_x: float, world_y: float) -> int:
+        """Assign robot ID based on position (fallback method)"""
+        # Simple heuristic: leader is usually near origin, followers are behind
+        distance_from_origin = math.sqrt(world_x**2 + world_y**2)
+        
+        if distance_from_origin < 3.0:
+            return 0  # Leader
+        elif world_x < -2.0:
+            if world_y < 0:
+                return 1  # Follower 1 (left)
+            else:
+                return 2  # Follower 2 (right)
+        else:
+            return 3  # Follower 3 (back)
+    
+    def update_vision_metrics(self, num_detections: int):
+        """Update vision system performance metrics"""
+        self.frame_count += 1
+        self.detection_count += num_detections
+        
+        # Calculate detection rate
+        if self.frame_count > 0:
+            self.vision_metrics.detection_rate = self.detection_count / self.frame_count
+        
+        # Calculate average confidence
+        if self.last_detections:
+            avg_confidence = sum(det.confidence.value for det in self.last_detections.values()) / len(self.last_detections)
+            self.vision_metrics.average_confidence = avg_confidence
+        
+        # Update total detections
+        self.vision_metrics.total_detections = self.detection_count
+    
+    def get_performance_metrics(self) -> Dict[str, Any]:
+        """Get current vision system performance metrics"""
+        return {
+            'accuracy': self.vision_metrics.average_confidence * 100.0,  # Convert to percentage
+            'detection_count': self.vision_metrics.total_detections,
+            'false_positives': self.vision_metrics.false_positives,
+            'missed_detections': self.vision_metrics.missed_detections,
+            'detection_rate': self.vision_metrics.detection_rate,
+            'processing_time': self.vision_metrics.processing_time,
+            'frame_count': self.frame_count
+        }
 
 
 def main(args=None):

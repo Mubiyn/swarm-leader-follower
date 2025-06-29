@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/miniconda3/envs/ros2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/bin/cmake
 
 # The command to remove a file.
-RM = /opt/miniconda3/envs/ros2/bin/cmake -E rm -f
+RM = /opt/homebrew/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_symlink_modern_swarm.dir/compiler_depend.m
 include CMakeFiles/ament_cmake_python_symlink_modern_swarm.dir/progress.make
 
 CMakeFiles/ament_cmake_python_symlink_modern_swarm:
-	/opt/miniconda3/envs/ros2/bin/cmake -E create_symlink /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/src/modern_swarm/modern_swarm /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/ament_cmake_python/modern_swarm/modern_swarm
+	/opt/homebrew/bin/cmake -E create_symlink /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/src/modern_swarm/modern_swarm /Users/Mubiyn/Desktop/rp_2/modern_swarm_leader_follower/ros2_workspace/build/modern_swarm/ament_cmake_python/modern_swarm/modern_swarm
 
 CMakeFiles/ament_cmake_python_symlink_modern_swarm.dir/codegen:
 .PHONY : CMakeFiles/ament_cmake_python_symlink_modern_swarm.dir/codegen

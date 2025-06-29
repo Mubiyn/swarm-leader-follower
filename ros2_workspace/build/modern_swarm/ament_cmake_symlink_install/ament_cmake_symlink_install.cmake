@@ -292,7 +292,7 @@ function(_ament_cmake_symlink_install_create_symlink absolute_file symlink)
   endif()
 
   execute_process(
-    COMMAND "/opt/miniconda3/envs/ros2/bin/cmake" "-E" "create_symlink"
+    COMMAND "/opt/homebrew/bin/cmake" "-E" "create_symlink"
       "${absolute_file}"
       "${symlink}"
   )

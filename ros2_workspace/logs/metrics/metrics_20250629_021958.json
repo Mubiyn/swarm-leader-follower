@@ -1,0 +1,1302 @@
+[
+  {
+    "timestamp": 1751152760.56426,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -6.319411850406299,
+      -1.2634989714905926,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.9438858492494081
+    }
+  },
+  {
+    "timestamp": 1751152760.5642738,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -5.292661619130867,
+      2.423114220801144,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 0.9058194747320156
+    }
+  },
+  {
+    "timestamp": 1751152760.564275,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -9.04192738361353,
+      0.6127251833200607,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -1.7290565104589979
+    }
+  },
+  {
+    "timestamp": 1751152760.564276,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -10.708160588545692,
+      -1.2911437674040325,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -1.4072121274207736
+    }
+  },
+  {
+    "timestamp": 1751152760.5643158,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 2.884685832935752,
+      "avg_control_effort": 0.671963020566405,
+      "avg_solve_time": 0.016211678981781007,
+      "max_solve_time": 0.022612810134887695,
+      "total_collisions": 0,
+      "runtime": 242.1506118774414
+    }
+  },
+  {
+    "timestamp": 1751152762.564598,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -5.686623337506168,
+      -1.490214441214407,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.7814940150262001
+    }
+  },
+  {
+    "timestamp": 1751152762.564605,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -5.607159136823808,
+      2.2307675316834956,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.0092568495514456
+    }
+  },
+  {
+    "timestamp": 1751152762.564606,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -9.095056282863753,
+      0.1983603126071713,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -1.643346661744243
+    }
+  },
+  {
+    "timestamp": 1751152762.564611,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -10.654684474943465,
+      -1.5522864060484276,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -1.3179907708545031
+    }
+  },
+  {
+    "timestamp": 1751152762.564654,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 2.7071170028507425,
+      "avg_control_effort": 0.39505376936820347,
+      "avg_solve_time": 0.015392899513244629,
+      "max_solve_time": 0.019289016723632812,
+      "total_collisions": 0,
+      "runtime": 244.15095019340515
+    }
+  },
+  {
+    "timestamp": 1751152764.560469,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -3.8699285088116104,
+      -2.6593847495896137,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.5934061787666213
+    }
+  },
+  {
+    "timestamp": 1751152764.560477,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -5.885292799391425,
+      1.9935725609107409,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.2443747659729587
+    }
+  },
+  {
+    "timestamp": 1751152764.560478,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -8.520846418957623,
+      -1.0933076756474467,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.5638984231428688
+    }
+  },
+  {
+    "timestamp": 1751152764.560479,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -9.662409686654339,
+      -2.6841150191461893,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.36233607770970727
+    }
+  },
+  {
+    "timestamp": 1751152764.560522,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 2.654145305395318,
+      "avg_control_effort": 0.3817942410173582,
+      "avg_solve_time": 0.014479877948760987,
+      "max_solve_time": 0.016885995864868164,
+      "total_collisions": 0,
+      "runtime": 246.14681696891785
+    }
+  },
+  {
+    "timestamp": 1751152766.5580878,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -2.0784422382757834,
+      -3.5843873370822843,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.34143505887727754
+    }
+  },
+  {
+    "timestamp": 1751152766.558096,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.0946407678693335,
+      1.7370524467190438,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.5850015506162989
+    }
+  },
+  {
+    "timestamp": 1751152766.558097,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -6.87177882924948,
+      -1.3130408180395978,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.233747440471907
+    }
+  },
+  {
+    "timestamp": 1751152766.5580978,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -7.951663873308832,
+      -2.8357606464344567,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.3397161304446088
+    }
+  },
+  {
+    "timestamp": 1751152766.5581398,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.097037960008846,
+      "avg_control_effort": 0.5753198326657205,
+      "avg_solve_time": 0.013290765285491944,
+      "max_solve_time": 0.016130924224853516,
+      "total_collisions": 0,
+      "runtime": 248.14443492889404
+    }
+  },
+  {
+    "timestamp": 1751152768.5596302,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -1.1474857931473486,
+      -3.92654861522401,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.057520566023856336
+    }
+  },
+  {
+    "timestamp": 1751152768.559637,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.248077852799508,
+      1.5011597625924034,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.8342934057341964
+    }
+  },
+  {
+    "timestamp": 1751152768.559639,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -5.9103840069823175,
+      -1.2000356111497332,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.4686625289944387
+    }
+  },
+  {
+    "timestamp": 1751152768.5596402,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -7.605339646605948,
+      -3.6489208327222395,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.22614510666553958
+    }
+  },
+  {
+    "timestamp": 1751152768.559679,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.6853054307144784,
+      "avg_control_effort": 0.7690599179640796,
+      "avg_solve_time": 0.012301993370056153,
+      "max_solve_time": 0.014626741409301758,
+      "total_collisions": 0,
+      "runtime": 250.14597511291504
+    }
+  },
+  {
+    "timestamp": 1751152770.5607119,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -1.0126289925416643,
+      -3.6641373268429165,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 0.18251201841295378
+    }
+  },
+  {
+    "timestamp": 1751152770.5607328,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.378156139895177,
+      1.2760620394179254,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.9400222453426408
+    }
+  },
+  {
+    "timestamp": 1751152770.560734,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -5.189483666281494,
+      -1.6231670189922345,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.4170784187352386
+    }
+  },
+  {
+    "timestamp": 1751152770.560735,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -6.734138102025261,
+      -4.712769696492454,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 0.2320221612416615
+    }
+  },
+  {
+    "timestamp": 1751152770.560796,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.9353724984790506,
+      "avg_control_effort": 0.6956523151336504,
+      "avg_solve_time": 0.012558600902557372,
+      "max_solve_time": 0.0230410099029541,
+      "total_collisions": 0,
+      "runtime": 252.14709210395813
+    }
+  },
+  {
+    "timestamp": 1751152772.558941,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -0.6944896536191423,
+      -2.481649218265626,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 0.3331220745764393
+    }
+  },
+  {
+    "timestamp": 1751152772.55895,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.490810219157898,
+      1.0399478623417309,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.0411436279497615
+    }
+  },
+  {
+    "timestamp": 1751152772.558951,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -3.354473826659008,
+      -2.68491564085817,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 0.1266398705887365
+    }
+  },
+  {
+    "timestamp": 1751152772.558953,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -5.14693734003353,
+      -4.7282966387954,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.0504199360531228
+    }
+  },
+  {
+    "timestamp": 1751152772.558997,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.720299246170709,
+      "avg_control_effort": 0.6825371799713755,
+      "avg_solve_time": 0.012739222049713134,
+      "max_solve_time": 0.0230410099029541,
+      "total_collisions": 0,
+      "runtime": 254.14529299736023
+    }
+  },
+  {
+    "timestamp": 1751152774.563466,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      0.7086673202613284,
+      -1.0301559683617232,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 0.4943852316611632
+    }
+  },
+  {
+    "timestamp": 1751152774.563482,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.565576792914174,
+      0.8119729405214656,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.288794804864299
+    }
+  },
+  {
+    "timestamp": 1751152774.563484,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -1.953902760397801,
+      -1.5139996425241076,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.3575067302897332
+    }
+  },
+  {
+    "timestamp": 1751152774.563487,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -3.896842919068439,
+      -3.4208118090843067,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.3596923547649176
+    }
+  },
+  {
+    "timestamp": 1751152774.56355,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.442326529060012,
+      "avg_control_effort": 0.7460782963005212,
+      "avg_solve_time": 0.013337903022766114,
+      "max_solve_time": 0.023743867874145508,
+      "total_collisions": 0,
+      "runtime": 256.14984607696533
+    }
+  },
+  {
+    "timestamp": 1751152776.559068,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      2.210121502701671,
+      -0.034787439662894215,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 0.8257759033835671
+    }
+  },
+  {
+    "timestamp": 1751152776.559079,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.595125665614756,
+      0.6527301988025874,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.6170483848281743
+    }
+  },
+  {
+    "timestamp": 1751152776.559081,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -1.2803452649328046,
+      -1.1017484865787377,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.2438664349584345
+    }
+  },
+  {
+    "timestamp": 1751152776.559082,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -2.9757536879467823,
+      -2.1439527517914643,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.088693676996397
+    }
+  },
+  {
+    "timestamp": 1751152776.5591302,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.4556771974785723,
+      "avg_control_effort": 0.7342957731341332,
+      "avg_solve_time": 0.012913923263549804,
+      "max_solve_time": 0.023743867874145508,
+      "total_collisions": 0,
+      "runtime": 258.14542627334595
+    }
+  },
+  {
+    "timestamp": 1751152778.5626519,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      2.942715123298162,
+      0.19343555646851213,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.256857423542715
+    }
+  },
+  {
+    "timestamp": 1751152778.5626612,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.604890192799244,
+      0.5795300534521967,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.8098218286331704
+    }
+  },
+  {
+    "timestamp": 1751152778.5626628,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      0.048756401420692944,
+      -0.27066288655177023,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.3540529075710213
+    }
+  },
+  {
+    "timestamp": 1751152778.562665,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -1.6158844784099107,
+      -1.9088791204002193,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.1902455205011655
+    }
+  },
+  {
+    "timestamp": 1751152778.5627148,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.7135988809273566,
+      "avg_control_effort": 0.7024038908761371,
+      "avg_solve_time": 0.013119182586669921,
+      "max_solve_time": 0.023743867874145508,
+      "total_collisions": 0,
+      "runtime": 260.149010181427
+    }
+  },
+  {
+    "timestamp": 1751152780.5656261,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      3.3612884064531516,
+      0.3072490921710986,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.648313723685449
+    }
+  },
+  {
+    "timestamp": 1751152780.5656362,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.6098823915821425,
+      0.5490986825591754,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.8850696121363693
+    }
+  },
+  {
+    "timestamp": 1751152780.5656378,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      0.49024740200625927,
+      1.6078934751401877,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.2287259825562806
+    }
+  },
+  {
+    "timestamp": 1751152780.565639,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -0.6522194956936366,
+      -0.40747679804930137,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.4502416919586372
+    }
+  },
+  {
+    "timestamp": 1751152780.565689,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.697531960574202,
+      "avg_control_effort": 0.6851447885196122,
+      "avg_solve_time": 0.013455233573913573,
+      "max_solve_time": 0.016078948974609375,
+      "total_collisions": 0,
+      "runtime": 262.15198516845703
+    }
+  },
+  {
+    "timestamp": 1751152782.557738,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      3.377770311629423,
+      0.3350791186119841,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.9495122356104733
+    }
+  },
+  {
+    "timestamp": 1751152782.557747,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.61246652000065,
+      0.5352873883873634,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.913211270717225
+    }
+  },
+  {
+    "timestamp": 1751152782.557748,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      0.3436961328098739,
+      2.0654755401298486,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.1418971648755412
+    }
+  },
+  {
+    "timestamp": 1751152782.557749,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -0.5679111084539764,
+      0.3278770467362704,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.4593729168315581
+    }
+  },
+  {
+    "timestamp": 1751152782.557796,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.2664533281708152,
+      "avg_control_effort": 0.4607376932194696,
+      "avg_solve_time": 0.013957250118255615,
+      "max_solve_time": 0.016078948974609375,
+      "total_collisions": 0,
+      "runtime": 264.144091129303
+    }
+  },
+  {
+    "timestamp": 1751152784.561733,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      2.54580024980921,
+      0.21303772326144804,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.1453645046113254
+    }
+  },
+  {
+    "timestamp": 1751152784.56174,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.615005252840517,
+      0.5228261846902355,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.8983304843483895
+    }
+  },
+  {
+    "timestamp": 1751152784.561742,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      0.20802379436075275,
+      1.8138752366351754,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.168989733823187
+    }
+  },
+  {
+    "timestamp": 1751152784.561743,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -0.5899148852323727,
+      0.15017684699292638,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.425075693014764
+    }
+  },
+  {
+    "timestamp": 1751152784.5617971,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 2.836916306955306,
+      "avg_control_effort": 0.19520301702581452,
+      "avg_solve_time": 0.014385373592376708,
+      "max_solve_time": 0.016491174697875977,
+      "total_collisions": 0,
+      "runtime": 266.14809226989746
+    }
+  },
+  {
+    "timestamp": 1751152786.563004,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      0.7496355481220827,
+      0.875028056769209,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.2914761541241067
+    }
+  },
+  {
+    "timestamp": 1751152786.5630112,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.620082651621188,
+      0.4979376394930398,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.883811116436278
+    }
+  },
+  {
+    "timestamp": 1751152786.563013,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      0.00462146630038535,
+      1.4759578769955246,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 0.92481268060585
+    }
+  },
+  {
+    "timestamp": 1751152786.5630138,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -0.6322846431495017,
+      0.4181854483749258,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 1.9258290267205376
+    }
+  },
+  {
+    "timestamp": 1751152786.56306,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 2.8131896162705385,
+      "avg_control_effort": 0.10154497008228597,
+      "avg_solve_time": 0.014740686416625976,
+      "max_solve_time": 0.018786191940307617,
+      "total_collisions": 0,
+      "runtime": 268.1493561267853
+    }
+  },
+  {
+    "timestamp": 1751152788.56465,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -0.32067137831376497,
+      2.131496772875671,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.6253018769226713
+    }
+  },
+  {
+    "timestamp": 1751152788.564657,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -6.645684765425967,
+      0.4961205671008661,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.989261229466326
+    }
+  },
+  {
+    "timestamp": 1751152788.564658,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -0.7584576621434479,
+      1.282121719643223,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 0.3397065528167923
+    }
+  },
+  {
+    "timestamp": 1751152788.56466,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -2.0811891998918406,
+      1.550515848443807,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 2.841861025284768
+    }
+  },
+  {
+    "timestamp": 1751152788.564708,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 2.945709349194636,
+      "avg_control_effort": 0.29635039997718005,
+      "avg_solve_time": 0.015790536403656005,
+      "max_solve_time": 0.018786191940307617,
+      "total_collisions": 0,
+      "runtime": 270.151004076004
+    }
+  },
+  {
+    "timestamp": 1751152790.566905,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -2.1966501454737286,
+      2.778194404030385,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 3.049721153408729
+    }
+  },
+  {
+    "timestamp": 1751152790.566915,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -7.338272256442427,
+      0.764576757274767,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -3.1391488037576205
+    }
+  },
+  {
+    "timestamp": 1751152790.566916,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -1.1625875440955755,
+      1.2452247108682575,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.2976955991458417
+    }
+  },
+  {
+    "timestamp": 1751152790.566918,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -3.5954502086557056,
+      2.647935315517838,
+      0.0
+    ],
+    "metadata": {
+      "orientation": 3.012436341473866
+    }
+  },
+  {
+    "timestamp": 1751152790.566968,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.1484938189926988,
+      "avg_control_effort": 0.4424304519989591,
+      "avg_solve_time": 0.017408576011657715,
+      "max_solve_time": 0.02119278907775879,
+      "total_collisions": 0,
+      "runtime": 272.15326404571533
+    }
+  },
+  {
+    "timestamp": 1751152792.569783,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -4.09175295935968,
+      2.6556280143270947,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -2.744663573224871
+    }
+  },
+  {
+    "timestamp": 1751152792.569794,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -8.124394134573125,
+      0.6810554923944258,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -3.0492927343196303
+    }
+  },
+  {
+    "timestamp": 1751152792.569796,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -1.5261829304558647,
+      1.4103974987124122,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.48666135442325975
+    }
+  },
+  {
+    "timestamp": 1751152792.569797,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -5.199810323725336,
+      3.4662811147298505,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -2.9916802041620594
+    }
+  },
+  {
+    "timestamp": 1751152792.569848,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.2521381341625153,
+      "avg_control_effort": 0.38936829392871564,
+      "avg_solve_time": 0.018640692234039306,
+      "max_solve_time": 0.02119278907775879,
+      "total_collisions": 0,
+      "runtime": 274.1561441421509
+    }
+  },
+  {
+    "timestamp": 1751152794.5673459,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -4.606313694092558,
+      2.459887797882106,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -2.2569088869759444
+    }
+  },
+  {
+    "timestamp": 1751152794.56737,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -8.225517751074927,
+      0.39970876739537803,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -2.9486131891132996
+    }
+  },
+  {
+    "timestamp": 1751152794.567372,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -1.80595935995424,
+      1.646327509315557,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.45749346349150044
+    }
+  },
+  {
+    "timestamp": 1751152794.567373,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -6.59130818542102,
+      4.3602916303561505,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -2.571628900475634
+    }
+  },
+  {
+    "timestamp": 1751152794.567422,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.3716301504662063,
+      "avg_control_effort": 0.37755471634384363,
+      "avg_solve_time": 0.019009208679199217,
+      "max_solve_time": 0.03199911117553711,
+      "total_collisions": 0,
+      "runtime": 276.1537170410156
+    }
+  },
+  {
+    "timestamp": 1751152796.567071,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -5.132014257945472,
+      1.7177202214149545,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -1.9397662407275247
+    }
+  },
+  {
+    "timestamp": 1751152796.5670779,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -7.8455980153776,
+      0.4624400390804928,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -2.949529061025358
+    }
+  },
+  {
+    "timestamp": 1751152796.56708,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -2.040659493552868,
+      1.9190182502584,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.34740817583249894
+    }
+  },
+  {
+    "timestamp": 1751152796.567081,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -6.333050900791629,
+      4.456986808102399,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -2.3248281377041162
+    }
+  },
+  {
+    "timestamp": 1751152796.5671282,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.335666643784151,
+      "avg_control_effort": 0.37275688949079155,
+      "avg_solve_time": 0.019484446048736573,
+      "max_solve_time": 0.03199911117553711,
+      "total_collisions": 0,
+      "runtime": 278.1534230709076
+    }
+  },
+  {
+    "timestamp": 1751152798.5616782,
+    "robot_id": "robot_0",
+    "metric_type": "position",
+    "value": [
+      -6.342708793264592,
+      0.4285564127024522,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -1.5030102880581293
+    }
+  },
+  {
+    "timestamp": 1751152798.561688,
+    "robot_id": "robot_1",
+    "metric_type": "position",
+    "value": [
+      -8.999059404435078,
+      0.049165905609364055,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -2.5744493956758445
+    }
+  },
+  {
+    "timestamp": 1751152798.56169,
+    "robot_id": "robot_2",
+    "metric_type": "position",
+    "value": [
+      -2.308492974005678,
+      2.1516567084841363,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -0.13888313732484678
+    }
+  },
+  {
+    "timestamp": 1751152798.561692,
+    "robot_id": "robot_3",
+    "metric_type": "position",
+    "value": [
+      -6.21622741916363,
+      3.4209667604530813,
+      0.0
+    ],
+    "metadata": {
+      "orientation": -2.5089409850719617
+    }
+  },
+  {
+    "timestamp": 1751152798.5617468,
+    "robot_id": "system",
+    "metric_type": "performance",
+    "value": {
+      "avg_formation_error": 3.5064889871860574,
+      "avg_control_effort": 0.4392188244788505,
+      "avg_solve_time": 0.020215511322021484,
+      "max_solve_time": 0.02499103546142578,
+      "total_collisions": 0,
+      "runtime": 280.14804196357727
+    }
+  }
+]

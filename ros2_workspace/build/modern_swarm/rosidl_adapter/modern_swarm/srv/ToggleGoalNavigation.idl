@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from modern_swarm/srv/ToggleGoalNavigation.srv
+// generated code does not contain a copyright notice
+
+
+module modern_swarm {
+  module srv {
+    struct ToggleGoalNavigation_Request {
+      boolean enable;
+    };
+    struct ToggleGoalNavigation_Response {
+      boolean success;
+
+      string message;
+
+      boolean navigation_active;
+    };
+  };
+};

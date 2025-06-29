@@ -1,0 +1,8 @@
+# AddObstacle service definition
+# Request: obstacle parameters
+float64 x               # X position of obstacle
+float64 y               # Y position of obstacle
+float64 radius          # Obstacle radius
+string obstacle_type    # "static", "dynamic"
+float64 velocity_x      # X velocity for dynamic obstacles
+float64 velocity_y      # Y velocity for dynamic obstacles
