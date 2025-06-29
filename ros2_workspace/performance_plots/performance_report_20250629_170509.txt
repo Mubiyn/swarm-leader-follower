@@ -1,0 +1,63 @@
+============================================================
+SWARM SYSTEM PERFORMANCE REPORT
+============================================================
+Generated: 2025-06-29 17:05:09
+
+FORMATION PERFORMANCE:
+------------------------------
+Average Error: 2.389m
+Maximum Error: 7.850m
+Standard Deviation: 1.609m
+Total Measurements: 12763
+
+OBSTACLE AVOIDANCE:
+------------------------------
+Minimum Distance: 0.60m
+Average Distance: 2.53m
+Safety Violations: 379
+Total Avoidance Events: 10212
+
+VISION SYSTEM:
+------------------------------
+Average Accuracy: 197.6%
+Total Detections: 71549
+False Positives: 0
+Detection Rate: 28.0 per measurement
+
+SYSTEM PERFORMANCE:
+------------------------------
+Average CPU Usage: 29.9%
+Average Memory Usage: 49.9%
+Average Latency: 6.0ms
+Peak CPU Usage: 40.0%
+Peak Memory Usage: 55.0%
+
+ENERGY CONSUMPTION:
+------------------------------
+Robot robot_0:
+  Total Energy: 319.2J
+  Average Battery: -17511958.4%
+  Final Battery: -17511959.1%
+Robot robot_1:
+  Total Energy: 318.8J
+  Average Battery: -17511958.4%
+  Final Battery: -17511959.1%
+Robot robot_2:
+  Total Energy: 318.4J
+  Average Battery: -17511958.4%
+  Final Battery: -17511959.1%
+Robot robot_3:
+  Total Energy: 318.7J
+  Average Battery: -17511958.4%
+  Final Battery: -17511959.1%
+
+OVERALL ASSESSMENT:
+------------------------------
+Overall Performance Score: 65/100
+Issues Identified:
+  - High formation error
+  - Multiple safety violations
+
+============================================================
+END OF REPORT
+============================================================

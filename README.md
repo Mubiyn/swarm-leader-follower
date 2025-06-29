@@ -4,6 +4,16 @@ A multi-robot leader-follower swarm system implemented in Python and ROS2, featu
 
 ![Leader-Follower Swarm System](leader-follower.png)
 
+## 📚 Documentation
+
+This project includes comprehensive documentation to help you understand, use, and contribute to the system:
+
+- **[📖 USAGE.md](USAGE.md)** - Detailed usage instructions and examples
+- **[📊 PERFORMANCE.md](PERFORMANCE.md)** - Performance analysis and optimization guidelines
+- **[🏗️ ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture and design decisions
+- **[📝 CONTRIBUTING.md](CONTRIBUTING.md)** - Development guidelines and contribution process
+- **[📋 CHANGELOG.md](CHANGELOG.md)** - Version history and changes
+
 ## Project Overview
 
 This project demonstrates the evolution of a swarm robotics system from standalone Python implementation to a full ROS2-based deployment. The system enables coordinated movement of multiple robots following a designated leader while maintaining formation patterns and avoiding obstacles.
@@ -123,10 +133,21 @@ modern_swarm_leader_follower/
 │       │   └── plotter.py             # Visualization
 │       ├── launch/       # Launch files
 │       ├── config/       # Configuration files
-│       └── urdf/         # Robot models
+│       ├── urdf/         # Robot models
+│       └── performance_plots/ # Performance analysis outputs
+│           ├── *.png     # Performance visualizations
+│           └── *.txt     # Performance reports
 ├── run_swarm_ros2_demo.sh      # Main demo script
 ├── run_swarm_static_transforms.sh # Static transforms
-└── requirements.txt     # Python dependencies
+├── requirements.txt     # Python dependencies
+├── requirements-conda.txt # Conda-specific dependencies
+└── Documentation/
+    ├── README.md        # This file
+    ├── USAGE.md         # Usage instructions
+    ├── PERFORMANCE.md   # Performance guidelines
+    ├── ARCHITECTURE.md  # System architecture
+    ├── CONTRIBUTING.md  # Contribution guidelines
+    └── CHANGELOG.md     # Version history
 ```
 
 ## Quick Start
@@ -170,16 +191,6 @@ ros2 service call /swarm/set_controller std_srvs/srv/SetBool "data: true"
 ros2 service call /swarm/toggle_vision std_srvs/srv/SetBool "data: true"
 ```
 
-## Performance Analysis
-
-The system includes comprehensive performance monitoring:
-- Real-time formation error tracking
-- Collision detection and statistics
-- Performance metrics visualization
-- Automated performance reports
-
-Performance data and visualizations are stored in `ros2_workspace/performance_plots/`.
-
 ## Development Notes
 
 ### Build System
@@ -212,14 +223,3 @@ Performance data and visualizations are stored in `ros2_workspace/performance_pl
 - Distributed computing for large swarms
 - Enhanced vision algorithms
 
-## Contributing
-
-See `CONTRIBUTING.md` for development guidelines and contribution process.
-
-## License
-
-[Add your license information here]
-
-## Acknowledgments
-
-This project demonstrates the practical application of swarm robotics concepts, from initial algorithm development in Python to deployment-ready ROS2 systems.

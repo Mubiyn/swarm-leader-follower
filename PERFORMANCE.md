@@ -1,5 +1,71 @@
 # Performance Analysis
 
+## Latest Performance Results (2025-06-29)
+
+### System Performance Overview
+
+The system was tested extensively and generated comprehensive performance data. Here are the key results from our latest run:
+
+#### Formation Performance
+- **Average Error**: 2.389m
+- **Maximum Error**: 7.850m
+- **Standard Deviation**: 1.609m
+- **Total Measurements**: 12,763
+
+#### Obstacle Avoidance Performance
+- **Minimum Distance**: 0.60m
+- **Average Distance**: 2.53m
+- **Safety Violations**: 379
+- **Total Avoidance Events**: 10,212
+
+#### System Resource Usage
+- **Average CPU Usage**: 29.9%
+- **Average Memory Usage**: 49.9%
+- **Average Latency**: 6.0ms
+- **Peak CPU Usage**: 40.0%
+- **Peak Memory Usage**: 55.0%
+
+#### Overall Assessment
+- **Performance Score**: 65/100
+- **Issues Identified**: High formation error, multiple safety violations
+
+### Performance Visualizations
+
+The system generated comprehensive performance plots during operation:
+
+![Comprehensive Performance Analysis](ros2_workspace/performance_plots/comprehensive_performance_20250629_170505.png)
+*Comprehensive system performance overview showing all key metrics over time*
+
+![Formation Analysis](ros2_workspace/performance_plots/formation_analysis_20250629_170507.png)
+*Formation error tracking and analysis for each robot*
+
+![Trajectory Analysis](ros2_workspace/performance_plots/trajectory_analysis_20250629_170507.png)
+*Robot trajectory and path analysis showing movement patterns*
+
+![Obstacle Analysis](ros2_workspace/performance_plots/obstacle_analysis_20250629_170507.png)
+*Obstacle avoidance performance and safety distance monitoring*
+
+![System Analysis](ros2_workspace/performance_plots/system_analysis_20250629_170507.png)
+*System resource usage and efficiency metrics*
+
+### Detailed Performance Report
+
+For a complete performance analysis, see the [detailed performance report](ros2_workspace/performance_plots/performance_report_20250629_170509.txt).
+
+### Performance Insights
+
+#### Key Findings
+1. **Formation Control**: The system shows moderate formation accuracy with room for improvement
+2. **Obstacle Avoidance**: Effective obstacle detection with some safety violations
+3. **System Efficiency**: Good resource utilization with stable performance
+4. **Vision System**: High detection rate with some accuracy issues
+
+#### Areas for Improvement
+1. **Formation Error Reduction**: Implement more robust control algorithms
+2. **Safety Enhancement**: Improve obstacle avoidance algorithms
+3. **Vision Accuracy**: Optimize vision system parameters
+4. **System Optimization**: Reduce computational overhead
+
 ## Overview
 
 The Modern Swarm Leader-Follower System includes comprehensive performance monitoring and analysis capabilities. This document details the performance characteristics, metrics collected, and analysis results from system testing.
